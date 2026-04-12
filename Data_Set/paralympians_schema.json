@@ -1,0 +1,77 @@
+[
+    {
+        "name": "ID",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "Name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Sex",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Age",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Height",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Weight",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Team",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "NOC",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Games",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Year",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Season",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "City",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Sport",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Event",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Medal",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    }
+]
