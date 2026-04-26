@@ -21,31 +21,47 @@ WITH unified_data AS (
     'Paralympic' as Origin
   FROM `project-e1786661-5608-4308-9ad.team_usa_hackathon.team_usa_paralympians`
 ),
+athlete_medal_counts AS (
+  SELECT ID, Name, 
+         SUM(CASE WHEN Medal = 'Gold' THEN 1 ELSE 0 END) as Total_Golds,
+         SUM(CASE WHEN Medal IN ('Silver', 'Bronze') THEN 1 ELSE 0 END) as Total_Other_Medals
+  FROM unified_data
+  GROUP BY ID, Name
+),
+unified_with_rarity AS (
+  SELECT u.*,
+         CASE
+           WHEN a.Total_Golds > 1 THEN 'Legendary'
+           WHEN a.Total_Golds = 1 THEN 'Epic'
+           WHEN a.Total_Other_Medals > 0 THEN 'Rare'
+           ELSE 'Common'
+         END as Rarity
+  FROM unified_data u
+  JOIN athlete_medal_counts a ON u.ID = a.ID AND u.Name = a.Name
+),
 archetype_mapping AS (
   SELECT *,
     CASE 
-      -- 1. OVERCLOCKERS: Multi-sport athletes (detected by comma or slash)
-      WHEN REGEXP_CONTAINS(Sport, r'[,/]') THEN 'Overclocker'
+      -- 1. THE TANK (Defense & Control)
+      WHEN Sport IN ('Weightlifting', 'Judo', 'Wrestling', 'Boxing', 'Taekwondo', 'Karate', 'Bobsleigh', 'Rugby', 'Rugby Sevens', 'Tug-Of-War', 'Powerlifting', 'Para Powerlifting') THEN 'Tank'
       
-      -- 2. BEHEMOTH: Strength & Power
-      WHEN Sport IN ('Weightlifting', 'Judo', 'Wrestling', 'Boxing', 'Taekwondo', 'Karate', 'Bobsleigh', 'Rugby', 'Rugby Sevens', 'Tug-Of-War', 'Powerlifting', 'Para Powerlifting') THEN 'Behemoth'
+      -- 2. THE DPS (Damage Dealers & Strikers) - High Burst Output
+      WHEN Sport IN ('Fencing', 'Skeleton', 'Luge', 'Speed Skating', 'Short Track Speed Skating', 'Sled Hockey', 'Ice Hockey', 'Football', 'Soccer', 'Baseball', 'Softball', 'Gymnastics', 'Artistic Gymnastics', 'Rhythmic Gymnastics', 'Trampolining') 
+           OR (Sport = 'Athletics' AND (REGEXP_CONTAINS(Event, r'100m|200m|400m|Relay|Hurdles'))) THEN 'DPS'
+           
+      -- 3. THE DPS (DoT / Damage Over Time) - Endurance Specialists
+      WHEN Sport IN ('Swimming', 'Para Swimming', 'Cycling', 'Para-Cycling', 'Rowing', 'Para-Rowing', 'Kayaking', 'Canoeing', 'Paracanoe', 'Triathlon', 'Paratriathlon', 'Modern Pentathlon', 'Cross-Country Skiing', 'Para Nordic Skiing', 'Biathlon', 'Para Biathlon', 'Marathon', 'Walking', 'Alpinism') 
+           OR (Sport = 'Athletics' AND NOT REGEXP_CONTAINS(Event, r'100m|200m|400m|Relay|Hurdles')) THEN 'DPS (DoT)'
       
-      -- 3. SOLO: Speed & Combat
-      WHEN Sport IN ('Fencing', 'Skeleton', 'Luge', 'Speed Skating', 'Short Track Speed Skating', 'Sled Hockey', 'Ice Hockey', 'Football', 'Soccer', 'Baseball', 'Softball') 
-           OR (Sport = 'Athletics' AND (REGEXP_CONTAINS(Event, r'100m|200m|400m|Relay|Hurdles'))) THEN 'Solo'
+      -- 4. THE SUPPORT (Utility & Buffs) - Team Synergy
+      WHEN Sport IN ('Basketball', 'Wheelchair Basketball', 'Volleyball', 'Beach Volleyball', 'Sitting Volleyball', 'Handball', 'Lacrosse') THEN 'Support'
       
-      -- 4. NETRUNNER: Precision & Focus
-      WHEN Sport IN ('Archery', 'Para Archery', 'Shooting', 'Equestrianism', 'Sailing', 'Diving', 'Boccia', 'Golf', 'Curling', 'Wheelchair Curling', 'Croquet', 'Roque', 'Polo', 'Cricket', 'Motorboating') THEN 'Netrunner'
+      -- 5. THE CONTROLLER (Strategy & Field Manipulation) - Precision & Range
+      WHEN Sport IN ('Archery', 'Para Archery', 'Shooting', 'Equestrianism', 'Sailing', 'Diving', 'Boccia', 'Golf', 'Curling', 'Wheelchair Curling', 'Croquet', 'Roque', 'Polo', 'Cricket', 'Motorboating', 'Tennis', 'Wheelchair Tennis', 'Table Tennis', 'Para Table Tennis', 'Badminton', 'Para Badminton', 'Racquets') THEN 'Controller'
       
-      -- 5. SCOUT: Agility & Reflexes
-      WHEN Sport IN ('Gymnastics', 'Artistic Gymnastics', 'Rhythmic Gymnastics', 'Trampolining', 'Basketball', 'Wheelchair Basketball', 'Table Tennis', 'Para Table Tennis', 'Badminton', 'Para Badminton', 'Tennis', 'Wheelchair Tennis', 'Volleyball', 'Beach Volleyball', 'Sitting Volleyball', 'Handball', 'Lacrosse', 'Racquets') THEN 'Scout'
-      
-      -- 6. GHOST: Endurance & Flow
-      WHEN Sport IN ('Swimming', 'Para Swimming', 'Cycling', 'Para-Cycling', 'Rowing', 'Para-Rowing', 'Kayaking', 'Canoeing', 'Paracanoe', 'Triathlon', 'Paratriathlon', 'Modern Pentathlon', 'Cross-Country Skiing', 'Para Nordic Skiing', 'Biathlon', 'Para Biathlon', 'Marathon', 'Walking', 'Alpinism') THEN 'Ghost'
-      
-      ELSE 'Solo' -- Default fallback
+      ELSE 'DPS' -- Default fallback
     END as Archetype
-  FROM unified_data
+  FROM unified_with_rarity
 ),
 stat_generation AS (
   SELECT *,
@@ -57,37 +73,37 @@ SELECT
   *,
   -- Generate Stats based on Archetype + Variance
   CASE 
-    WHEN Archetype = 'Behemoth' THEN 80 + variance_seed
-    WHEN Archetype = 'Overclocker' THEN 75 + (variance_seed / 2)
-    WHEN Archetype = 'Solo' THEN 60 + variance_seed
-    ELSE 40 + variance_seed
+    WHEN Archetype = 'Tank' THEN 85 + variance_seed
+    WHEN Archetype LIKE 'DPS%' THEN 60 + variance_seed
+    WHEN Archetype = 'Support' THEN 70 + variance_seed
+    ELSE 50 + variance_seed
   END as STRENGTH,
   
   CASE 
-    WHEN Archetype = 'Solo' THEN 80 + variance_seed
-    WHEN Archetype = 'Overclocker' THEN 75 + (variance_seed / 2)
-    WHEN Archetype = 'Scout' THEN 70 + variance_seed
+    WHEN Archetype = 'DPS' THEN 85 + variance_seed
+    WHEN Archetype = 'DPS (DoT)' THEN 75 + variance_seed
+    WHEN Archetype = 'Controller' THEN 65 + variance_seed
     ELSE 40 + variance_seed
   END as SPEED,
   
   CASE 
-    WHEN Archetype = 'Netrunner' THEN 85 + variance_seed
-    WHEN Archetype = 'Overclocker' THEN 75 + (variance_seed / 2)
-    WHEN Archetype = 'Ghost' THEN 65 + variance_seed
+    WHEN Archetype = 'Controller' THEN 85 + variance_seed
+    WHEN Archetype = 'Support' THEN 75 + variance_seed
+    WHEN Archetype LIKE 'DPS%' THEN 65 + variance_seed
     ELSE 40 + variance_seed
   END as PRECISION,
   
   CASE 
-    WHEN Archetype = 'Scout' THEN 85 + variance_seed
-    WHEN Archetype = 'Overclocker' THEN 75 + (variance_seed / 2)
-    WHEN Archetype = 'Solo' THEN 65 + variance_seed
+    WHEN Archetype = 'Support' THEN 85 + variance_seed
+    WHEN Archetype = 'DPS' THEN 75 + variance_seed
+    WHEN Archetype = 'Controller' THEN 70 + variance_seed
     ELSE 40 + variance_seed
-  END as AGILITY,
+  END as UTILITY,
   
   CASE 
-    WHEN Archetype = 'Ghost' THEN 85 + variance_seed
-    WHEN Archetype = 'Overclocker' THEN 75 + (variance_seed / 2)
-    WHEN Archetype = 'Behemoth' THEN 60 + variance_seed
+    WHEN Archetype = 'DPS (DoT)' THEN 85 + variance_seed
+    WHEN Archetype = 'Tank' THEN 80 + variance_seed
+    WHEN Archetype = 'Support' THEN 75 + (variance_seed / 2)
     ELSE 40 + variance_seed
   END as ENDURANCE
 FROM stat_generation;
