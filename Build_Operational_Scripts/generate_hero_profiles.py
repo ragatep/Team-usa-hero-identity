@@ -8,18 +8,16 @@ from google.cloud import bigquery
 PROJECT_ID = "project-e1786661-5608-4308-9ad"
 LOCATION = "us-central1"
 DATASET_ID = "team_usa_hackathon"
-OLYMPIAN_TABLE = "team_usa_olympians"
 IDENTITY_TABLE = "hero_identities"
+OUTPUT_FILE = r"E:\joffet\Documents\GitHubRepo\Team-usa-hero-identity\Data_Set\data_set_combined\hero_identities.json"
 
 # Archetype Definitions for the AI
 ARCHETYPE_DESCRIPTIONS = {
-    "Behemoth": "Strength & Resilience. The frontline tank (e.g., Wrestling, Weightlifting).",
-    "Solo": "Precision & Lethal Accuracy. The specialist (e.g., Archery, Fencing, Shooting).",
-    "Netrunner": "Technical & Strategic. Master of systems and flow (e.g., Sailing, Rowing, Tactical Cycling).",
-    "Scout": "Distance & Endurance. The relentless operative who never stops (e.g., Marathon, Triathlon).",
-    "Ghost": "Speed & Agility. Fluid motion, vanishing before the enemy sees them (e.g., 100m Sprint, Swimming).",
-    "Vanguard": "Versatility. Elite operatives who master multiple sporting systems (e.g., Decathlon, Pentathlon).",
-    "Equalizer": "Augmented. Heroes who use advanced tech/prosthesis to redefine the limits of human potential."
+    "Tank": "Defense & Control. High durability and positioning (e.g., Weightlifting, Judo, Wrestling, Rugby).",
+    "DPS": "Damage Dealers - Burst. Speed and high impact (e.g., Sprints, Gymnastics, Fencing).",
+    "DPS (DoT)": "Damage over Time. Endurance and sustained output (e.g., Marathon, Triathlon, Rowing).",
+    "Support": "Utility & Buffs. Team synergy (e.g., Basketball, Volleyball).",
+    "Controller": "Precision & Strategy. Strategy and field manipulation (e.g., Archery, Shooting)."
 }
 
 SYSTEM_PROMPT = f"""
@@ -29,28 +27,27 @@ Your tone is heroic, futuristic, and leans into a 'Premium' Cyberpunk 2077 / Edg
 TASK:
 Generate a high-fidelity 'Hero Profile' for a Team USA athlete based on their biometrics and achievement data.
 
-ARCHETYPES:
+MMO ARCHETYPES:
 {json.dumps(ARCHETYPE_DESCRIPTIONS, indent=2)}
 
 DIRECTIONS:
-1. Assign the most fitting Archetype based on the athlete's sport and biometrics.
-2. If the athlete competed in multiple distinct types of events, assign 'Vanguard'.
-3. If they are a Paralympian (Para-prefixed sports or Origin context), assign 'Equalizer' and emphasize their 'Augmented' status heroically.
-4. Generate a 'Heroic Alias' (e.g., 'The Crimson Flash' or 'Iron Wall').
-5. Write a 2-3 sentence 'Hero Lore' (backstory) that sounds like a character report from a high-tech resistance movement. Use terms like 'Optics', 'Neural-Link', 'Overdrive', 'Kinetics'.
+1. The athlete's Archetype and Rarity are already determined. Use the provided MMO Archetype strictly.
+2. If their 'Origin' is 'Paralympic', emphasize their 'Augmented' status heroically. Use terms referring to advanced cybernetics, neural-links, and high-tech medical engineering.
+3. Generate a 'Heroic Alias' (e.g., 'The Crimson Flash' or 'Iron Wall').
+4. Write a 2-3 sentence 'Hero Lore' (backstory) that sounds like a character report from a high-tech resistance movement or elite operative faction.
+5. Generate a 'Powerful Main Ability Name' based on a move or action performed in real life from their sport.
+6. Write an 'Ability Description' detailing how the archetype uses this powerful ability on opponents (e.g., tactical descriptions of specific throws, timing-based counters, or resource-ignored effects) in an MMO combat context.
 
 OUTPUT FORMAT:
 Return ONLY a JSON object with these keys:
 - alias
-- archetype
 - lore
-- primary_stat (e.g., Strength, Agility, Intelligence)
 - ability_name
 - ability_description
 """
 
 def generate_hero_profile(athlete_data):
-    """Uses Gemini 3.1 Pro Preview to generate a hero profile."""
+    """Uses Gemini to generate a hero profile."""
     client = genai.Client(vertexai=True, project=PROJECT_ID, location=LOCATION)
     
     # Format athlete data for prompt
@@ -59,9 +56,12 @@ def generate_hero_profile(athlete_data):
     Sport: {athlete_data['Sport']}
     Event: {athlete_data['Event']}
     Biometrics: {athlete_data['Height']}cm, {athlete_data['Weight']}kg
-    Age: {athlete_data['Age']}
+    Age: {athlete_data.get('Age', 'Unknown')}
     Medals: {athlete_data.get('Medal', 'None')}
     Year: {athlete_data['Year']}
+    Origin: {athlete_data['Origin']}
+    Assigned Archetype: {athlete_data['Archetype']}
+    Assigned Rarity: {athlete_data['Rarity']}
     """
     
     try:
@@ -70,27 +70,34 @@ def generate_hero_profile(athlete_data):
             contents=f"Data: {athlete_str}\n\nGenerate Hero Profile:",
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT,
-                temperature=0.7,
-                response_mime_type="application/json"
+                temperature=1.0,
+                response_mime_type="application/json",
+                thinking_config=types.ThinkingConfig(thinking_level="HIGH")
             )
         )
         return json.loads(response.text) if response.text else None
     except Exception as e:
-        print(f"AI Generation Error: {e}")
+        print(f"AI Generation Error for {athlete_data['Name']}: {e}")
         return None
 
-def get_random_athletes(count=3):
-    """Queries BigQuery for random Team USA athletes."""
+def get_representative_athletes():
+    """Queries BigQuery for exactly 1 athlete per Archetype per Rarity."""
     bq_client = bigquery.Client(project=PROJECT_ID)
     
-    # We mix both tables if possible, or just focus on the identities one
     query = f"""
-        SELECT Name, Sex, Age, Height, Weight, Sport, Event, Medal, Year, Archetype as Static_Archetype
-        FROM `{PROJECT_ID}.{DATASET_ID}.{IDENTITY_TABLE}`
-        WHERE Height IS NOT NULL 
-          AND Weight IS NOT NULL
-        ORDER BY RAND()
-        LIMIT {count}
+        SELECT *
+        FROM (
+          SELECT 
+            Name, Sex, Age, Height, Weight, Sport, Event, Medal, Year, Origin, Rarity, Archetype,
+            STRENGTH, SPEED, PRECISION, UTILITY, ENDURANCE,
+            ROW_NUMBER() OVER(PARTITION BY Archetype, Rarity ORDER BY RAND()) as rn
+          FROM `{PROJECT_ID}.{DATASET_ID}.{IDENTITY_TABLE}`
+          WHERE Height IS NOT NULL 
+            AND Weight IS NOT NULL
+            AND Archetype IS NOT NULL
+            AND Rarity IS NOT NULL
+        )
+        WHERE rn = 1
     """
     
     query_job = bq_client.query(query)
@@ -98,26 +105,41 @@ def get_random_athletes(count=3):
 
 def main():
     print(f"--- Team USA Hero Profile Generator (Powered by Gemini 3.1 Pro) ---")
+    print("Fetching 1 athlete per Archetype per Rarity (Max 20 athletes)...")
     
-    athletes = get_random_athletes(3)
+    athletes = get_representative_athletes()
+    final_dataset = []
     
     for athlete in athletes:
-        print(f"\nProcessing: {athlete.Name} ({athlete.Sport})...")
+        print(f"\nProcessing: [{athlete.Rarity}] [{athlete.Archetype}] {athlete.Name} ({athlete.Sport})...")
         
         # Capture row data
         data = dict(athlete)
         
+        # Remove the 'rn' key from BigQuery output
+        if 'rn' in data:
+            del data['rn']
+            
         # Generate AI Profile
         profile = generate_hero_profile(data)
         
         if profile:
-            print(f"ALIAS: {profile.get('alias')}")
-            print(f"ARCHETYPE: {profile.get('archetype')}")
-            print(f"LORE: {profile.get('lore')}")
-            print(f"ABILITY: {profile.get('ability_name')} - {profile.get('ability_description')}")
-            print("-" * 50)
+            data['alias'] = profile.get('alias', '')
+            data['lore'] = profile.get('lore', '')
+            data['ability'] = {
+                'name': profile.get('ability_name', ''),
+                'description': profile.get('ability_description', '')
+            }
+            final_dataset.append(data)
+            print(f" -> Success! Alias: {data['alias']}")
         else:
-            print("Failed to generate profile.")
+            print(" -> Failed to generate profile.")
+            
+    # Save to JSON
+    print(f"\nSaving {len(final_dataset)} profiles to {OUTPUT_FILE}...")
+    with open(OUTPUT_FILE, 'w') as f:
+        json.dump(final_dataset, f, indent=2)
+    print("Done!")
 
 if __name__ == "__main__":
     main()
