@@ -1,8 +1,11 @@
 import os
 import json
+from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 from google.cloud import bigquery
+
+load_dotenv() # Load GOOGLE_CLOUD_API_KEY from .env
 
 # Configuration
 PROJECT_ID = "project-e1786661-5608-4308-9ad"
@@ -48,7 +51,8 @@ Return ONLY a JSON object with these keys:
 
 def generate_hero_profile(athlete_data):
     """Uses Gemini to generate a hero profile."""
-    client = genai.Client(vertexai=True, project=PROJECT_ID, location=LOCATION)
+    # Use API Key authentication for the Gemini API
+    client = genai.Client(api_key=os.environ.get("GOOGLE_CLOUD_API_KEY"))
     
     # Format athlete data for prompt
     athlete_str = f"""
