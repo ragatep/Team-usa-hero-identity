@@ -6,6 +6,7 @@ export interface UserBiometrics {
   height: number;
   weight: number;
   age: number;
+  unitSystem: 'metric' | 'imperial';
   isSynced: boolean;
 }
 
@@ -21,6 +22,7 @@ export const BioSyncProvider = ({ children }: { children: ReactNode }) => {
     height: 175, // Default/Average
     weight: 70,
     age: 28,
+    unitSystem: 'metric',
     isSynced: false
   });
 

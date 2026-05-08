@@ -1,3 +1,16 @@
 # Build scripts and assets
 Build_Operational_Scripts/
 Build_Assets/
+
+# Environment variables / secrets
+.env
+
+# Scratch / temporary files
+scratch/
+
+# IDE / workspace config
+*.code-workspace
+
+# AI agent config files
+AGENTS.md
+CLAUDE.md
