@@ -32,12 +32,13 @@ Digital Mirror bridges the gap between **international athletics** and **gaming 
 Every card in the system represents the physical "DNA" of an Olympic or Paralympic discipline. Utilizing anonymous biographical data — height, weight, age, sport, medal count — the system generates:
 
 - **Olympic & Paralympic Parity**: A balanced roster of 16 Olympic and 4 Paralympic hero-archetypes across all rarity tiers.
+- **Veteran Factor (New)**: A multi-game longevity algorithm that boosts stats based on real-world competitive history (Rewards multi-cycle athletes with +Utility and +Endurance).
 - **Rarity Tiers** based on historical achievement (Legendary, Epic, Rare, Common).
 - **MMO Archetypes** mapped from their sport discipline (Tank, DPS, Support, Controller).
 - **Character Lore** and **Combat Abilities** synthesized by Vertex AI.
 - **AI-Generated Portraits** using **Vertex AI Imagen 3** with a refined industrial-punk prompt pipeline.
 
-The user can then **sync their own biometrics** (height, weight, age) to see how they compare to each hero-archetype, with real-time "Diff Math" calculated in both **Metric** and **Imperial** units.
+The user can then **sync their own biometrics** (height, weight, age) to activate the **Digital Mirror Neural Sync**, which calculates a real-time **Sync Score (%)** based on their alignment with the hero's physical stats.
 
 ---
 
@@ -83,14 +84,10 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 No. **Digital Mirror is 100% anonymous.** The system utilizes purely physical metadata (height, weight, etc.) and historical records. No real-world names, personal identities, or likenesses of individual athletes are included.
 
 ### What is the "Re-Sync Biometrics" feature?
-It's the core interactive feature of Digital Mirror. By entering your own height, weight, and age, the system compares your physical stats against each hero-archetype and displays the difference (in green or red) on every card's Bio-Sheet.
+It's the core interactive feature of Digital Mirror. By entering your own height, weight, and age, the system compares your physical stats against each hero-archetype. A **Neural Sync Bar** on the card face calculates your alignment percentage (0-100%), while the Bio-Sheet displays the precise "Diff Math" (in green or red).
 
-### How were the rarity tiers determined?
-Rarity is based on real-world medal data associated with the anonymous discipline profile:
-- **Legendary** — Multiple Gold Medals
-- **Epic** — Single Gold Medal
-- **Rare** — Silver or Bronze Medals
-- **Common** — Participant (No Medal)
+### What is the "Veteran Factor"?
+The Veteran Factor is a data-driven stat modifier derived from the athlete's real performance history. Athletes who have competed in multiple Olympic or Paralympic Games are granted a **Veteran Bonus (+5, +10, +15)** to their **Utility** and **Endurance** stats, reflecting their accumulated competitive wisdom and physical longevity.
 
 ### How were the MMO archetypes assigned?
 Each sport was mapped to a traditional MMO role based on physical demands. For example, Wrestlers and Judoka map to **Tank** (frontline defense), while Sprinters and Skiers map to **DPS** (burst damage).

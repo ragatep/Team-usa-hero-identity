@@ -28,6 +28,18 @@ athlete_medal_counts AS (
   FROM unified_data
   GROUP BY ID, Name
 ),
+-- VETERAN FACTOR: Count unique Games appearances per athlete
+-- Athletes who competed across multiple Olympic/Paralympic cycles
+-- earn stat bonuses reflecting real-world longevity and experience
+veteran_factor AS (
+  SELECT ID, Name,
+         COUNT(DISTINCT Year) as Games_Attended,
+         -- Each additional Games beyond the first grants +5 to key stats
+         -- Capped at 4 bonus tiers (20 max bonus) to prevent stat inflation
+         LEAST((COUNT(DISTINCT Year) - 1) * 5, 20) as Veteran_Bonus
+  FROM unified_data
+  GROUP BY ID, Name
+),
 unified_with_rarity AS (
   SELECT u.*,
          CASE
@@ -35,9 +47,12 @@ unified_with_rarity AS (
            WHEN a.Total_Golds = 1 THEN 'Epic'
            WHEN a.Total_Other_Medals > 0 THEN 'Rare'
            ELSE 'Common'
-         END as Rarity
+         END as Rarity,
+         COALESCE(v.Games_Attended, 1) as Games_Attended,
+         COALESCE(v.Veteran_Bonus, 0) as Veteran_Bonus
   FROM unified_data u
   JOIN athlete_medal_counts a ON u.ID = a.ID AND u.Name = a.Name
+  LEFT JOIN veteran_factor v ON u.ID = v.ID AND u.Name = v.Name
 ),
 archetype_mapping AS (
   SELECT *,
@@ -71,7 +86,8 @@ stat_generation AS (
 )
 SELECT 
   *,
-  -- Generate Stats based on Archetype + Variance
+  -- Generate Stats based on Archetype + Variance + Veteran Bonus
+  -- Veteran_Bonus adds +5 per additional Games attended (capped at +20)
   CASE 
     WHEN Archetype = 'Tank' THEN 85 + variance_seed
     WHEN Archetype LIKE 'DPS%' THEN 60 + variance_seed
@@ -94,16 +110,16 @@ SELECT
   END as PRECISION,
   
   CASE 
-    WHEN Archetype = 'Support' THEN 85 + variance_seed
-    WHEN Archetype = 'DPS' THEN 75 + variance_seed
-    WHEN Archetype = 'Controller' THEN 70 + variance_seed
-    ELSE 40 + variance_seed
+    WHEN Archetype = 'Support' THEN 85 + variance_seed + Veteran_Bonus
+    WHEN Archetype = 'DPS' THEN 75 + variance_seed + Veteran_Bonus
+    WHEN Archetype = 'Controller' THEN 70 + variance_seed + Veteran_Bonus
+    ELSE 40 + variance_seed + Veteran_Bonus
   END as UTILITY,
   
   CASE 
-    WHEN Archetype = 'DPS (DoT)' THEN 85 + variance_seed
-    WHEN Archetype = 'Tank' THEN 80 + variance_seed
-    WHEN Archetype = 'Support' THEN 75 + (variance_seed / 2)
-    ELSE 40 + variance_seed
+    WHEN Archetype = 'DPS (DoT)' THEN 85 + variance_seed + Veteran_Bonus
+    WHEN Archetype = 'Tank' THEN 80 + variance_seed + Veteran_Bonus
+    WHEN Archetype = 'Support' THEN 75 + (variance_seed / 2) + Veteran_Bonus
+    ELSE 40 + variance_seed + Veteran_Bonus
   END as ENDURANCE
 FROM stat_generation;

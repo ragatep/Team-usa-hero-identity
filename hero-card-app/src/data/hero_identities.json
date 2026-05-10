@@ -37,11 +37,11 @@
     "Origin": "Olympic",
     "Rarity": "Epic",
     "Archetype": "Controller",
-    "STRENGTH": 52,
-    "SPEED": 67,
-    "PRECISION": 87,
-    "UTILITY": 72,
-    "ENDURANCE": 42,
+    "STRENGTH": 55,
+    "SPEED": 70,
+    "PRECISION": 90,
+    "UTILITY": 80,
+    "ENDURANCE": 50,
     "alias": "Zero-Drift Sentinel",
     "imagePath": "/assets/heroes/epic_controller_mmo.png",
     "lore": "Dug out from the encrypted 1932 Archives, Zero-Drift Sentinel is an elite marksman from the pioneer era of ballistic cyber-warfare. Utilizing archaic but flawlessly tuned optical wetware, he commands the battlefield from the shadows, dictating enemy movement with chilling precision. He operates as the ultimate overwatch for the resistance, turning chaotic skirmishes into calculated executions.",
@@ -49,7 +49,9 @@
       "name": "Prone Axis Lock",
       "summary": "Projects a 50m suppression zone that strips enemy cloaking and auto-fires a disruptor to interrupt hostile abilities.",
       "description": "Entering a stabilized prone stance, Zero-Drift Sentinel roots himself to the grid and projects a 50-meter tactical suppression zone. Enemies caught in this field suffer a severe movement penalty and are stripped of cloaking tech. If a hostile target attempts to use a movement or burst ability, Zero-Drift Sentinel automatically fires a small-bore kinetic disruptor, interrupting the cast and applying a 4-second system reboot."
-    }
+    },
+    "gamesAttended": 2,
+    "veteranBonus": 5
   },
   {
     "Sex": "M",
@@ -63,11 +65,11 @@
     "Origin": "Olympic",
     "Rarity": "Legendary",
     "Archetype": "Controller",
-    "STRENGTH": 51,
-    "SPEED": 66,
-    "PRECISION": 86,
-    "UTILITY": 71,
-    "ENDURANCE": 41,
+    "STRENGTH": 56,
+    "SPEED": 71,
+    "PRECISION": 91,
+    "UTILITY": 81,
+    "ENDURANCE": 51,
     "alias": "The Chrome Cavalier",
     "imagePath": "/assets/heroes/legendary_controller_mmo.png",
     "lore": "A Legendary engram recovered from the '52 Golden Era archives, The Chrome Cavalier dominates the grid as a high-society tactician neurally bonded to a custom-tuned synthetic thoroughbred. With aristocratic lethality and flawless tactical synchronization, he manipulates battlefield geometry, transforming chaotic neon warzones into his own meticulously controlled arena.",
@@ -75,7 +77,9 @@
       "name": "Cross-Country Overwrite",
       "summary": "Commands his mount to trample control points, applying a massive AoE root and nullifying enemy environmental buffs.",
       "description": "The Chrome Cavalier initiates a multi-phase terrain manipulation sequence, commanding his mount to trample enemy control points and rewrite the battlefield's topography. This applies a massive AoE root to all hostile units caught in his pathing, instantly nullifying their environmental buffs and forcing them into a strict tactical lockdown."
-    }
+    },
+    "gamesAttended": 2,
+    "veteranBonus": 5
   },
   {
     "Sex": "M",
@@ -92,8 +96,8 @@
     "STRENGTH": 59,
     "SPEED": 74,
     "PRECISION": 94,
-    "UTILITY": 79,
-    "ENDURANCE": 49,
+    "UTILITY": 84,
+    "ENDURANCE": 54,
     "alias": "The Apex Cavalier",
     "imagePath": "/assets/heroes/rare_controller_mmo.png",
     "lore": "A master of mechanized beast-taming from the early terrestrial jump-programs, The Apex Cavalier rides an elite cyber-steed into the neon-drenched fray. As a veteran tactician of the Resistance, he commands the high ground, dictating the flow of battle with flawless, calculated maneuvers.",
@@ -101,7 +105,9 @@
       "name": "Oxer Overdrive Protocol",
       "summary": "Vaults over frontlines on his mount, deploying hard-light barriers that lock enemies into choke points and interrupt casting.",
       "description": "Commanding his mount to execute a high-altitude vault over enemy frontlines, the Cavalier deploys a network of hard-light 'Oxer' barriers upon landing. This manipulation locks hostiles into tight choke points and applies a severe movement debuff, allowing his squad to systematically dismantle the opposition."
-    }
+    },
+    "gamesAttended": 2,
+    "veteranBonus": 5
   },
   {
     "Sex": "M",
@@ -127,7 +133,9 @@
       "name": "Double-Pole Kinetic Strike",
       "summary": "Thrusts forward with dual neuro-carbon poles, shattering armor plating and resetting evasion cooldowns.",
       "description": "The Glacial Phantom thrusts forward using dual neuro-carbon poles to deliver a concentrated burst of kinetic damage. This high-velocity maneuver shatters standard armor plating, staggering the target and instantly resetting The Glacial Phantom's evasion cooldowns to maintain relentless frontline pressure."
-    }
+    },
+    "gamesAttended": 1,
+    "veteranBonus": 0
   },
   {
     "Sex": "NA",
@@ -170,8 +178,8 @@
     "STRENGTH": 74,
     "SPEED": 99,
     "PRECISION": 79,
-    "UTILITY": 89,
-    "ENDURANCE": 54,
+    "UTILITY": 104,
+    "ENDURANCE": 69,
     "alias": "The Cryo-Velocity Phantom",
     "imagePath": "/assets/heroes/legendary_dps_mmo.png",
     "lore": "Operating out of the hyper-cooled Northern Spire, The Cryo-Velocity Phantom is a legendary strike operative who leaves only a slipstream of frozen neon in her wake. Her mastery of frictionless kinetic acceleration allows her to shatter elite corporate hit-squads before their optics can even register a threat. To the syndicate bosses who fear her, she is the sudden chill down their spine right before the total blackout.",
@@ -179,7 +187,9 @@
       "name": "Kinetic Crossover Strike",
       "summary": "Dashes at burst-speed while untargetable, then unleashes an armor-piercing slash inflicting 'Sub-Zero Fracture'.",
       "description": "Channelling raw kinetic energy through her frictionless mono-molecular blades, she enters a burst-speed dash that renders her temporarily untargetable. By executing a series of high-G crossover steps to build maximum momentum, she unleashes a concentrated, armor-piercing slash that deals massive burst DPS and leaves the target suffering from a 'Sub-Zero Fracture' vulnerability debuff."
-    }
+    },
+    "gamesAttended": 4,
+    "veteranBonus": 15
   },
   {
     "Sex": "F",
@@ -193,11 +203,11 @@
     "Origin": "Olympic",
     "Rarity": "Rare",
     "Archetype": "DPS",
-    "STRENGTH": 69,
-    "SPEED": 94,
-    "PRECISION": 74,
-    "UTILITY": 84,
-    "ENDURANCE": 49,
+    "STRENGTH": 72,
+    "SPEED": 97,
+    "PRECISION": 77,
+    "UTILITY": 92,
+    "ENDURANCE": 57,
     "alias": "The Neon Sweeper",
     "imagePath": "/assets/heroes/rare_dps_mmo.png",
     "lore": "Forged in the grid-fires of the 2012 sector conflicts, The Neon Sweeper is a high-velocity shock operative who turns the battlefield into her own personal strike zone. Wielding a carbon-weave kinetic driver, her relentless frontline assaults shattered elite defense formations to secure a Bronze-tier combat rating. She now operates as a prime damage dealer, exploiting micro-seconds of tactical vulnerability with lethal precision.",
@@ -205,7 +215,9 @@
       "name": "Overcharged Tomahawk Strike",
       "summary": "Launches a compressed energy projectile that bypasses armor, dealing massive critical damage and staggering the target.",
       "description": "The Neon Sweeper executes a rapid reverse-stick kinetic slash, launching a compressed energy projectile at terminal velocity. This high-impact 'Tomahawk' burst instantly bypasses standard armor plating, dealing massive critical damage to a single target while applying a centralized 'Stagger' effect that disrupts enemy casting."
-    }
+    },
+    "gamesAttended": 2,
+    "veteranBonus": 5
   },
   {
     "Sex": "M",
@@ -219,11 +231,11 @@
     "Origin": "Olympic",
     "Rarity": "Common",
     "Archetype": "DPS (DoT)",
-    "STRENGTH": 61,
-    "SPEED": 76,
-    "PRECISION": 66,
-    "UTILITY": 41,
-    "ENDURANCE": 86,
+    "STRENGTH": 65,
+    "SPEED": 80,
+    "PRECISION": 70,
+    "UTILITY": 50,
+    "ENDURANCE": 95,
     "alias": "The Trench Runner",
     "imagePath": "/assets/heroes/common_dot_mmo.png",
     "lore": "A rapid-assault operative engineered for the grueling urban marathons of the neon sprawl. The Trench Runner relies on bio-woven endurance fibers to outlast corporate pursuit, navigating barricades and flooded hazard zones with frictionless momentum. He exhausts pursuers in prolonged chases, bleeding out their stamina until they collapse in his slipstream.",
@@ -231,7 +243,9 @@
       "name": "Hydro-Vault Slipstream",
       "summary": "Leaps over defenses, trailing corrosive nano-fluid that applies compounding DoT while boosting his evasion.",
       "description": "Executes a high-velocity vault over enemy defensive constructs, trailing a corrosive nano-fluid wake behind him. Hostiles caught in the residual hydro-trail suffer compounding Damage over Time (DoT) to their armor plating while The Trench Runner's evasion matrix receives a sustained tactical buff."
-    }
+    },
+    "gamesAttended": 2,
+    "veteranBonus": 5
   },
   {
     "Sex": "M",
@@ -248,8 +262,8 @@
     "STRENGTH": 71,
     "SPEED": 86,
     "PRECISION": 76,
-    "UTILITY": 51,
-    "ENDURANCE": 96,
+    "UTILITY": 56,
+    "ENDURANCE": 101,
     "alias": "The Omni-Phase Vanguard",
     "imagePath": "/assets/heroes/epic_dot_mmo.png",
     "lore": "The Omni-Phase Vanguard is a legendary survivor possessing ten distinct combat subroutines hardwired into his neural cortex. Operating as the ultimate tactical generalist, his biometric chassis is tuned for relentless, prolonged engagements that systematically exhaust corporate strike teams. He dictates the battlefield's tempo, bleeding high-threat targets dry through sheer, inescapable attrition.",
@@ -257,7 +271,9 @@
       "name": "Bell-Lap Lactic Cascade",
       "summary": "Initiates a relentless pursuit applying stacking 'Lactic Burn' DoT that exponentially increases the longer the fight lasts.",
       "description": "The Omni-Phase Vanguard taps into his deep-reserve bio-woven cyber-lungs to initiate a high-speed kinetic pursuit that applies a stacking 'Lactic Burn' Damage over Time (DoT) effect. Each successive strike bypasses standard armor plating and slowly drains the target's stamina and action points. The longer the engagement lasts, the more exponentially the DoT ticks, guaranteeing the enemy's system completely crashes before they reach the finish line."
-    }
+    },
+    "gamesAttended": 2,
+    "veteranBonus": 5
   },
   {
     "Sex": "F",
@@ -272,10 +288,10 @@
     "Rarity": "Legendary",
     "Archetype": "DPS (DoT)",
     "STRENGTH": 62,
-    "SPEED": 77,
+    "SPEED": 87,
     "PRECISION": 67,
-    "UTILITY": 42,
-    "ENDURANCE": 87,
+    "UTILITY": 82,
+    "ENDURANCE": 47,
     "alias": "The Silver Pentarch",
     "imagePath": "/assets/heroes/legendary_dot_mmo.png",
     "lore": "Forged in the neon-drenched proving grounds of the '72 Grid, The Silver Pentarch is an elite multi-phase operative who outlasts and dismantles corporate kill-squads. By seamlessly hot-swapping between five distinct combat sub-routines, she grinds down high-value targets through relentless, sustained kinetic pressure. Her silver-tier neuro-link ensures she remains a lethal force long after her enemies' systems suffer critical thermal failure.",
@@ -283,7 +299,9 @@
       "name": "Kinetic Pentathlon Cascade",
       "summary": "Dashes through enemies in five phases, inflicting stacking 'Thermal Burn' DoT that amplifies with each stage.",
       "description": "The Silver Pentarch initiates a five-stage overclocked hot-swap sequence, dashing through enemy formations to inflict a stacking 'Thermal Burn' DoT debuff on all targets caught in her slipstream. Each successive phase of the cascade refreshes the duration and amplifies the DoT tick rate, passively melting away enemy armor plating and draining their stamina reserves until their cybernetic cores completely shut down."
-    }
+    },
+    "gamesAttended": 2,
+    "veteranBonus": 5
   },
   {
     "Sex": "F",
@@ -309,7 +327,9 @@
       "name": "The Crimson Catch & Drive",
       "summary": "Applies stacking bio-corrosion DoT that multiplies with each rhythmic 'Drive' phase, melting through armor.",
       "description": "Initiates a rhythmic, compounding assault using her neural-rhythm link that applies a stacking bio-corrosion DoT to the target. With every cyclical 'Drive' phase, the DoT multiplier increases, melting through synthetic armor and draining enemy stamina pools as her stroke rate hits critical mass."
-    }
+    },
+    "gamesAttended": 1,
+    "veteranBonus": 0
   },
   {
     "Sex": "M",
@@ -335,7 +355,9 @@
       "name": "No-Look Neural Pass",
       "summary": "Grants a targeted ally massive Haste and guaranteed Critical Strike while scrambling nearby enemy tracking.",
       "description": "The Chrome Conductor interfaces directly with the squad's combat network, instantly calculating optimal trajectory vectors to bypass enemy frontline aggro. He executes a high-velocity 'No-Look' tactical distribution that grants a targeted ally a massive burst of Haste and a guaranteed Critical Strike on their next action, while simultaneously scrambling enemy radar tracking within the immediate AoE."
-    }
+    },
+    "gamesAttended": 1,
+    "veteranBonus": 0
   },
   {
     "Sex": "F",
@@ -349,11 +371,11 @@
     "Origin": "Olympic",
     "Rarity": "Epic",
     "Archetype": "Support",
-    "STRENGTH": 75,
-    "SPEED": 45,
-    "PRECISION": 80,
-    "UTILITY": 90,
-    "ENDURANCE": 77.5,
+    "STRENGTH": 78,
+    "SPEED": 48,
+    "PRECISION": 83,
+    "UTILITY": 98,
+    "ENDURANCE": 84,
     "alias": "The Aero-Link Vanguard",
     "imagePath": "/assets/heroes/epic_support_mmo.png",
     "lore": "Operating from the shadowed neon courts of Sector 88, The Aero-Link Vanguard acts as the tactical neural-anchor for elite strike operatives. Leveraging her height and flawless aerial kinetics, she dictates the flow of battle by predicting enemy trajectories before they even execute. Her sheer presence and tactical synergy transform fractured rebel units into an unstoppable, cohesive force of devastation.",
@@ -361,7 +383,9 @@
       "name": "Kinetic Quick-Set Protocol",
       "summary": "Absorbs incoming attacks mid-air, then 'Sets' the stored energy to reset squad cooldowns and buff critical damage.",
       "description": "The Aero-Link Vanguard executes a flawless mid-air maneuver to intercept incoming enemy burst attacks, absorbing the kinetic force into her specialized impact-dampening gauntlets. She then 'Sets' this stored energy directly into the neural-links of her team, instantly resetting her squad's offensive cooldowns and granting a massive critical damage buff to their next synchronized strike."
-    }
+    },
+    "gamesAttended": 2,
+    "veteranBonus": 5
   },
   {
     "Sex": "NA",
@@ -387,7 +411,9 @@
       "name": "Neural-Sync Apex Set",
       "summary": "Nullifies incoming damage and channels the energy to an ally, granting shielding, 200% Crit, and CC immunity.",
       "description": "Chrome Sentinel grounds her augmented chassis to intercept incoming enemy strikes, completely nullifying the damage and absorbing the kinetic energy. She then seamlessly 'Sets' this stored power to a targeted ally, granting them a massive burst of temporary shielding, a 200% Critical Strike multiplier, and absolute crowd-control immunity for their next attack."
-    }
+    },
+    "gamesAttended": 1,
+    "veteranBonus": 0
   },
   {
     "Sex": "M",
@@ -413,7 +439,9 @@
       "name": "Quick-Stick Kinetic Transfer",
       "summary": "Executes a precision pass that purges ally debuffs and grants 'Fast Break', buffing squad speed and crit synergy.",
       "description": "The Kinetic Weaver utilizes his digitally-forged high-tension carbon-mesh cradle to execute a high-velocity precision pass, instantly transferring a surge of tactical energy to a targeted ally. This pivotal support action purges all neural crowd-control debuffs and grants a 'Fast Break' aura, hyper-buffing the squad's movement speed and critical strike synergy for a devastating, uncontested push."
-    }
+    },
+    "gamesAttended": 1,
+    "veteranBonus": 0
   },
   {
     "Sex": "M",
@@ -439,7 +467,9 @@
       "name": "Kinetic Suplex Protocol",
       "summary": "Locks a target in a Greco-Roman bodylock, then slams them for heavy burst damage with a hard stun.",
       "description": "Closes the distance to trap a high-threat target in an inescapable Greco-Roman bodylock, completely neutralizing their evasion systems and locking them into a control state. The Analog Vanguard then executes a massive 'Suplex' throw, dealing heavy physical burst damage, generating maximum threat aggro, and inflicting an immediate hard stun on the enemy unit to protect his squad."
-    }
+    },
+    "gamesAttended": 1,
+    "veteranBonus": 0
   },
   {
     "Sex": "F",
@@ -456,8 +486,8 @@
     "STRENGTH": 97,
     "SPEED": 52,
     "PRECISION": 52,
-    "UTILITY": 52,
-    "ENDURANCE": 92,
+    "UTILITY": 62,
+    "ENDURANCE": 102,
     "alias": "The Gravity Weaver",
     "imagePath": "/assets/heroes/epic_tank_mmo.png",
     "lore": "An elite frontline enforcer for the Grid's underground resistance, The Gravity Weaver weaponizes pure momentum to shatter corporate riot lines. Forged in the neon-lit dojos of Sector 4, she possesses an uncanny ability to read combat telemetry, turning an opponent's mass into their greatest vulnerability using advanced 'Uchi-Mata' throwing protocols.",
@@ -465,7 +495,9 @@
       "name": "Zero-G Uchi-Mata",
       "summary": "Counter-throws an attacker with frame-perfect timing, triggering an AoE shockwave that shatters enemy shields.",
       "description": "The Gravity Weaver enters a fortified counter-stance, intercepting incoming melee strikes with frame-perfect timing. She instantly grapples the aggressor and executes a devastating 'Uchi-Mata' inner-thigh throw, slamming them into the permacrete to trigger a massive AoE shockwave that shatters enemy shielding and generates maximum threat, forcing all nearby hostiles to focus their fire on her."
-    }
+    },
+    "gamesAttended": 3,
+    "veteranBonus": 10
   },
   {
     "Sex": "M",
@@ -482,8 +514,8 @@
     "STRENGTH": 99,
     "SPEED": 54,
     "PRECISION": 54,
-    "UTILITY": 54,
-    "ENDURANCE": 94,
+    "UTILITY": 59,
+    "ENDURANCE": 99,
     "alias": "The Tungsten Vice",
     "imagePath": "/assets/heroes/legendary_tank_mmo.png",
     "lore": "A legacy vanguard operative from the original 1920 Founders Initiative, 'The Tungsten Vice' relies on hyper-dense biological muscle fibers and kinetic mastery rather than excess chrome. He acts as a localized gravity well, locking down heavily augmented cyber-psychos with pure, unadulterated grappling biomechanics and 'Gut-Wrench' techniques from the early athletic archives.",
@@ -491,7 +523,9 @@
       "name": "Kinetic Gut-Wrench Suplex",
       "summary": "Bypasses shields to grapple and slam the target, dealing massive damage with a 5-second AoE stun.",
       "description": "Closing the distance at blinding speed, The Tungsten Vice initiates a zero-tolerance 'Gut-Wrench' grapple that bypasses active energy shields and evasion stats. He hoists the primary target into the air before slamming them into the ferrocrete, dealing massive blunt-force damage while generating an AoE shockwave that applies a 5-second neural stun to adjacent enemies and forces maximum aggro onto himself."
-    }
+    },
+    "gamesAttended": 2,
+    "veteranBonus": 5
   },
   {
     "Sex": "M",

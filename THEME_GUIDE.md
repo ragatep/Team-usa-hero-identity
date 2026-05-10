@@ -181,6 +181,24 @@ Every portrait was generated using Google's Imagen API with the following enforc
 
 ---
 
+## Interactive UI Systems
+
+Digital Mirror features a dynamic UI that reacts to the user's data and the underlying BigQuery athlete records.
+
+### 🧬 Neural Sync Status (The Digital Mirror)
+Located at the top of the card face, this system calculates a real-time **Sync Score (%)** when the user enters their biometrics.
+- **Visual**: A high-tech status bar that fills based on the match percentage.
+- **Design Philosophy**: Represents the "Synchronization" between the user and the historical archetype.
+- **States**: `SYNC_AWAITING` (Idle) -> `SYNC_XX%` (Active).
+
+### 🛡️ Veteran Bonus (VET +Score)
+Located in the Ability Row, this badge surfaces the "Veteran Factor" derived from BigQuery.
+- **Visual**: A rarity-colored pill opposite the ability name.
+- **Design Philosophy**: Rewards athletes who have competed in multiple Olympic or Paralympic Games, granting them +5 to +15 stat modifiers.
+- **Logic**: derived directly from the `Games_Attended` count in the athlete dataset.
+
+---
+
 ## Color Palette Reference
 
 ### Rarity Colors

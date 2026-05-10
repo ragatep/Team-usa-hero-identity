@@ -86,7 +86,7 @@ const parseMetric = (val: string | number) => {
 
 // --- Extracted Card Faces Component ---
 // This allows us to render the exact same card in the grid AND in the modal.
-const CardFaces = ({ hero, archTheme, rarityTheme, displayHeight, displayWeight, diffHeight, diffWeight, heightUnit, weightUnit, diffHeightUnit, diffWeightUnit, userBio, imageSrc, isExpanded }: any) => (
+const CardFaces = ({ hero, archTheme, rarityTheme, displayHeight, displayWeight, diffHeight, diffWeight, heightUnit, weightUnit, diffHeightUnit, diffWeightUnit, userBio, imageSrc, isExpanded, syncScore }: any) => (
   <>
     {/* FRONT: TCG-STYLE CARD */}
     <div 
@@ -119,19 +119,36 @@ const CardFaces = ({ hero, archTheme, rarityTheme, displayHeight, displayWeight,
         
         {/* === TOP BAR: Name + Alias + Hex Icon (Right) === */}
         <div className="relative z-20 px-3 pt-3 pb-2 flex items-start gap-2" style={{ backgroundColor: '#0a0a0a' }}>
-          {/* Name block — takes full width */}
-          <div className="flex-1 min-w-0 pt-0.5">
-            <h2 
-              className="text-[17px] text-white uppercase leading-tight break-words glitch-hover"
-              style={{ 
-                fontFamily: "'Oxanium', sans-serif",
-                fontWeight: 800,
-                letterSpacing: '0.08em'
-              }}
-            >
-              {hero.alias}
-            </h2>
-          </div>
+            {/* Name block — takes full width */}
+            <div className="flex-1 min-w-0 pt-0.5">
+              <h2 
+                className="text-[17px] text-white uppercase leading-tight break-words glitch-hover"
+                style={{ 
+                  fontFamily: "'Oxanium', sans-serif",
+                  fontWeight: 800,
+                  textShadow: `0 0 10px ${rarityTheme.color}44`
+                }}
+              >
+                {hero.alias}
+              </h2>
+              
+              {/* SYNC STATUS BAR (Layer 3) */}
+              <div className="flex items-center gap-2 mt-1 opacity-80">
+                <div className="flex-1 h-[3px] bg-white/10 rounded-full overflow-hidden flex">
+                  <div 
+                    className="h-full transition-all duration-1000"
+                    style={{ 
+                      width: userBio.isSynced ? `${syncScore}%` : '0%',
+                      backgroundColor: userBio.isSynced ? rarityTheme.color : '#333',
+                      boxShadow: userBio.isSynced ? `0 0 10px ${rarityTheme.color}` : 'none'
+                    }}
+                  />
+                </div>
+                <span className="text-[9px] font-mono font-bold tracking-tighter" style={{ color: userBio.isSynced ? rarityTheme.color : '#444' }}>
+                  {userBio.isSynced ? `SYNC_${syncScore}%` : 'SYNC_AWAITING'}
+                </span>
+              </div>
+            </div>
 
           {/* Hexagonal Archetype Icon — Right */}
           <div className="flex-shrink-0 relative w-10 h-12 flex items-center justify-center">
@@ -166,7 +183,7 @@ const CardFaces = ({ hero, archTheme, rarityTheme, displayHeight, displayWeight,
               background: `linear-gradient(to bottom, ${archTheme.main}55 0%, ${archTheme.main}22 30%, transparent 60%, #000 100%)`
             }}
           />
-          
+
           {/* Character portrait */}
           <div className="relative w-full h-full z-10 flex items-center justify-center">
             <div className="relative w-full h-full">
@@ -204,10 +221,19 @@ const CardFaces = ({ hero, archTheme, rarityTheme, displayHeight, displayWeight,
 
         {/* === ABILITY SECTION === */}
         <div className="px-3 py-2.5 flex-shrink-0" style={{ backgroundColor: '#0a0a0a' }}>
-          <div className="flex items-start gap-1.5 mb-1.5">
-            <span className="inline-block px-1.5 py-0.5 bg-red-700 text-[9px] font-black text-white uppercase tracking-wider leading-none flex-shrink-0 mt-0.5 border border-white/20 shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+          <div className="flex items-center gap-1.5 mb-1.5">
+            <span className="inline-block px-1.5 py-0.5 bg-red-700 text-[9px] font-black text-white uppercase tracking-wider leading-none flex-shrink-0 border border-white/20 shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
               {hero.ability.name}
             </span>
+            <div className="flex-1" />
+            {hero.veteranBonus > 0 && (
+              <span 
+                className="px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wider leading-none border border-white/20 shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
+                style={{ backgroundColor: `${rarityTheme.color}33`, color: rarityTheme.color }}
+              >
+                VET +{hero.veteranBonus}
+              </span>
+            )}
           </div>
           <p className="text-[10px] text-white/70 leading-relaxed">
             {hero.ability.summary || hero.ability.description}
@@ -308,6 +334,13 @@ const CardFaces = ({ hero, archTheme, rarityTheme, displayHeight, displayWeight,
               </p>
            </div>
         </div>
+
+        {/* SOURCE QUERY FOOTER (Layer 4) */}
+        <div className="mt-auto pt-4 opacity-20 border-t border-white/5">
+          <p className="text-[7px] font-mono tracking-widest text-white uppercase">
+            SOURCE_QUERY: SELECT * FROM `TEAM_USA_HACKATHON` WHERE ATHLETE_ID = '{hero.Year}_{hero.Sport.substring(0,3).toUpperCase()}'
+          </p>
+        </div>
       </div>
     </div>
   </>
@@ -347,10 +380,22 @@ export const HeroCard: React.FC<HeroCardProps> = ({ hero }) => {
     weightUnit = 'lbs';
   }
 
-  const diffHeight = mathHeroHeight ? userBio.height - mathHeroHeight : null;
-  const diffWeight = mathHeroWeight ? userBio.weight - mathHeroWeight : null;
   const diffHeightUnit = isImperial ? 'in' : 'cm';
   const diffWeightUnit = isImperial ? 'lbs' : 'kg';
+
+  const diffHeight = mathHeroHeight ? userBio.height - mathHeroHeight : null;
+  const diffWeight = mathHeroWeight ? userBio.weight - mathHeroWeight : null;
+
+  // --- LAYER 3: SYNC SCORE CALCULATION ---
+  // Calculates how closely the user matches the athlete's biometrics
+  let syncScore = 0;
+  if (userBio.isSynced && mathHeroHeight && mathHeroWeight) {
+    const hDiffPct = Math.abs(userBio.height - mathHeroHeight) / mathHeroHeight;
+    const wDiffPct = Math.abs(userBio.weight - mathHeroWeight) / mathHeroWeight;
+    const avgDiff = (hDiffPct + wDiffPct) / 2;
+    // 100% sync if perfect match, decreases as difference grows
+    syncScore = Math.max(0, Math.min(100, Math.round(100 - (avgDiff * 250))));
+  }
 
   const placeholderImage = `/assets/heroes/${hero.Archetype.replace(/[^a-zA-Z]/g, '').toLowerCase()}.png`;
   const imageSrc = hero.imagePath || placeholderImage;
@@ -365,7 +410,7 @@ export const HeroCard: React.FC<HeroCardProps> = ({ hero }) => {
     return () => { document.body.style.overflow = 'unset'; };
   }, [isExpanded]);
 
-  const cardFacesProps = { hero, archTheme, rarityTheme, displayHeight, displayWeight, diffHeight, diffWeight, heightUnit, weightUnit, diffHeightUnit, diffWeightUnit, userBio, imageSrc };
+  const cardFacesProps = { hero, archTheme, rarityTheme, displayHeight, displayWeight, diffHeight, diffWeight, heightUnit, weightUnit, diffHeightUnit, diffWeightUnit, userBio, imageSrc, syncScore };
 
   return (
     <>
