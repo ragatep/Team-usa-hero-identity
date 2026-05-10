@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd hero-card-app && npm run build",
+  "outputDirectory": "hero-card-app/.next",
+  "installCommand": "cd hero-card-app && npm install"
+}
