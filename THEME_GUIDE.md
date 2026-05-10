@@ -16,7 +16,7 @@
 
 ## Rarity Tier System
 
-Every hero card is assigned a rarity tier based on the athlete's real Olympic or Paralympic medal achievements. Rarity determines the card's border glow color, badge styling, and perceived "power level" within the collection.
+Every hero card is assigned a rarity tier based on the physical excellence and historical achievement of the sport discipline. Rarity determines the card's border glow color, badge styling, and perceived "power level" within the collection.
 
 | Tier | Color | Hex Code | Criteria | Glow Effect |
 |------|-------|----------|----------|-------------|
@@ -31,27 +31,16 @@ The rarity system mirrors established conventions from games like *Genshin Impac
 
 - **Gold = Legendary**: Universally recognized as the highest tier across gaming culture. Maps perfectly to the Olympic Gold Medal — the pinnacle of athletic achievement.
 - **Purple = Epic**: A mainstay in MMO loot systems (World of Warcraft, Destiny). Represents a single defining moment of glory.
-- **Blue = Rare**: The "solid performer" tier. Athletes with Silver or Bronze medals proved their elite status even without reaching the top.
-- **Green = Common**: The foundation tier. These athletes competed on the world stage — a feat that puts them in the top fraction of a percent of humanity.
+- **Blue = Rare**: The "solid performer" tier. Historical Silver or Bronze medal profiles prove elite status even without reaching the top.
+- **Green = Common**: The foundation tier. These profiles represented their country at the highest level of international competition.
 
-> 💡 *Even a "Common" hero in Digital Mirror represented their country at the Olympic Games. There are no weak cards in this set.*
-
-### Card Layout by Tier
-
-In the 5×4 grid layout, cards are sorted **Legendary → Epic → Rare → Common** (top to bottom), creating a visual cascade:
-
-| Row | Tier | Border Color |
-|-----|------|-------------|
-| Row 1 | Legendary | Gold glow |
-| Row 2 | Epic | Purple glow |
-| Row 3 | Rare | Blue glow |
-| Row 4 | Common | Green glow |
+> 💡 *Even a "Common" hero in Digital Mirror represents a pinnacle of human capability. There are no weak cards in this set.*
 
 ---
 
 ## MMO Archetype System
 
-Each hero-athlete is assigned one of five MMO archetypes based on the tactical demands of their sport. These archetypes define the hero's combat role, stat distribution, and ability design.
+Each hero is assigned one of five MMO archetypes based on the tactical demands of their sport discipline. These archetypes define the hero's combat role, stat distribution, and ability design.
 
 ### ⚔️ Tank — Frontline Defense & Control
 
@@ -65,11 +54,12 @@ Each hero-athlete is assigned one of five MMO archetypes based on the tactical d
 
 **MMO Description**: The Tank is the immovable anchor of any squad. In traditional MMOs like *World of Warcraft* or *Final Fantasy XIV*, Tanks draw enemy aggro and absorb punishment so their teammates can deal damage safely. They prioritize survivability and crowd control over raw damage output.
 
-**Team USA Mapping**: Athletes from **Wrestling**, **Judo**, and other grappling/combat sports. These athletes physically dominate their opponents through direct force, positional control, and the ability to absorb and redirect kinetic energy — exactly what a Tank does in an MMO encounter.
+**Archetype Mapping**: Disciplines from **Wrestling**, **Judo**, and **Wheelchair Rugby**. These athletes physically dominate their arena through direct force, positional control, and the ability to absorb and redirect kinetic energy.
 
 **Featured Heroes**:
-- Kaarlo "Kalle" Anttila — *The Tungsten Vice* (Legendary, Wrestling)
-- Urka Šolnir — *The Gravity Weaver* (Epic, Judo)
+- *The Tungsten Vice* (Legendary, Wrestling)
+- *The Gravity Weaver* (Epic, Judo)
+- *The Collision Engine* (Rare, Wheelchair Rugby)
 
 ---
 
@@ -83,13 +73,14 @@ Each hero-athlete is assigned one of five MMO archetypes based on the tactical d
 | **Primary Stats** | SPEED (highest), STRENGTH |
 | **Role** | Maximum single-target burst damage |
 
-**MMO Description**: The DPS (Damage Per Second) role is the primary offensive force. In games like *Overwatch* or *League of Legends*, DPS characters eliminate high-value targets with concentrated bursts of damage. They trade survivability for lethal output.
+**MMO Description**: The DPS (Damage Per Second) role is the primary offensive force. In games like *Overwatch* or *League of Legends*, DPS characters eliminate high-value targets with concentrated bursts of damage.
 
-**Team USA Mapping**: Athletes from **Speed Skating**, **Alpine Skiing**, **Field Hockey**, and **Cross Country Skiing**. These are speed-dominant sports where the athlete must deliver maximum force in a concentrated window — a sprint finish, a slalom gate, or a hockey strike.
+**Archetype Mapping**: Disciplines from **Speed Skating**, **Alpine Skiing**, **Field Hockey**, and **Nordic Skiing**. These are speed-dominant sports where the hero must deliver maximum force in a concentrated window.
 
 **Featured Heroes**:
-- Catriona Ann Le May Doan — *The Cryo-Velocity Phantom* (Legendary, Speed Skating)
-- Phillip "Phil" Mahre — *The Frost-Edge Phantom* (Epic, Alpine Skiing)
+- *The Cryo-Velocity Phantom* (Legendary, Speed Skating)
+- *Multi-Spectral Stryder* (Epic, Nordic Skiing)
+- *The Neon Sweeper* (Rare, Hockey)
 
 ---
 
@@ -103,13 +94,14 @@ Each hero-athlete is assigned one of five MMO archetypes based on the tactical d
 | **Primary Stats** | ENDURANCE (highest), SPEED |
 | **Role** | Sustained, compounding damage that wears enemies down |
 
-**MMO Description**: DoT (Damage over Time) specialists apply stacking debuffs that slowly drain enemy health pools. Unlike burst DPS who spike damage instantly, DoT operatives excel in prolonged engagements where their cumulative output overtakes burst damage over time. Think Warlocks in *WoW* or Poison builds in *Path of Exile*.
+**MMO Description**: DoT (Damage over Time) specialists apply stacking debuffs that slowly drain enemy health pools. They excel in prolonged engagements where their cumulative output overtakes burst damage.
 
-**Team USA Mapping**: Athletes from **Decathlon**, **Pentathlon**, **Steeplechase**, and **Rowing**. These are endurance-dominant sports where success comes from sustained effort over extended periods — multiple events, long distances, and rhythmic output that compounds over time.
+**Archetype Mapping**: Disciplines from **Decathlon**, **Pentathlon**, **Steeplechase**, and **Rowing**. These are endurance-dominant sports where success comes from sustained effort over extended periods.
 
 **Featured Heroes**:
-- Heidemarie "Heide" Rosendahl — *The Silver Pentarch* (Legendary, Pentathlon)
-- Robert Změlík — *The Omni-Phase Vanguard* (Epic, Decathlon)
+- *The Silver Pentarch* (Legendary, Pentathlon)
+- *The Omni-Phase Vanguard* (Epic, Decathlon)
+- *The Chrome Cadence* (Rare, Rowing)
 
 ---
 
@@ -123,13 +115,14 @@ Each hero-athlete is assigned one of five MMO archetypes based on the tactical d
 | **Primary Stats** | UTILITY (highest), PRECISION |
 | **Role** | Buff allies, heal, provide tactical coordination |
 
-**MMO Description**: Supports are the force multipliers. In games like *Overwatch* (Mercy, Ana) or *League of Legends* (Soraka, Lulu), Supports amplify their team's effectiveness through healing, shielding, and buff distribution. A great Support turns a good team into an unstoppable one.
+**MMO Description**: Supports are the force multipliers. They amplify their team's effectiveness through healing, shielding, and buff distribution.
 
-**Team USA Mapping**: Athletes from **Volleyball**, **Sitting Volleyball**, **Basketball**, and **Lacrosse**. These are team-centric sports where the athlete's primary value comes from enabling their teammates — setting plays, distributing the ball, and creating opportunities for others to score.
+**Archetype Mapping**: Disciplines from **Volleyball**, **Sitting Volleyball**, **Basketball**, and **Lacrosse**. These are team-centric sports where the hero's primary value comes from enabling their teammates.
 
 **Featured Heroes**:
-- Monique Burkland Matthews — *Chrome Sentinel* (Legendary, Sitting Volleyball)
-- Hou Yuzhu — *The Aero-Link Vanguard* (Epic, Volleyball)
+- *Chrome Sentinel* (Legendary, Sitting Volleyball)
+- *The Aero-Link Vanguard* (Epic, Volleyball)
+- *The Kinetic Weaver* (Rare, Lacrosse)
 
 ---
 
@@ -143,13 +136,14 @@ Each hero-athlete is assigned one of five MMO archetypes based on the tactical d
 | **Primary Stats** | PRECISION (highest), UTILITY |
 | **Role** | Dictate battlefield positioning, debuff enemies, restrict movement |
 
-**MMO Description**: Controllers manipulate the battlefield itself. In games like *Guild Wars 2* or *Dungeons & Dragons*, Controllers use crowd control, terrain manipulation, and debuffs to dictate where enemies can go and what they can do. They don't deal the most damage — they ensure the damage lands.
+**MMO Description**: Controllers manipulate the battlefield itself. They use crowd control, terrain manipulation, and debuffs to dictate where enemies can go and what they can do.
 
-**Team USA Mapping**: Athletes from **Shooting** and **Equestrianism**. These are precision-dominant sports where success depends on absolute spatial awareness, perfect timing, and the ability to control an environment (a firing lane, a course) with surgical accuracy.
+**Archetype Mapping**: Disciplines from **Shooting**, **Equestrianism**, and **Track & Field**. These are precision-dominant sports where success depends on absolute spatial awareness, timing, and environmental mastery.
 
 **Featured Heroes**:
-- Nils "Hans" von Blixen-Finecke, Jr. — *The Chrome Cavalier* (Legendary, Equestrianism)
-- Bertil Vilhelm Rönnmark — *Zero-Drift Sentinel* (Epic, Shooting)
+- *The Chrome Cavalier* (Legendary, Equestrianism)
+- *Zero-Drift Sentinel* (Epic, Shooting)
+- *The Signal Phantom* (Common, Track & Field)
 
 ---
 
@@ -157,11 +151,11 @@ Each hero-athlete is assigned one of five MMO archetypes based on the tactical d
 
 | Archetype | Sports | Rationale |
 |-----------|--------|-----------|
-| **Tank** | Wrestling, Judo | Direct physical domination, positional control, damage absorption |
-| **DPS (Burst)** | Speed Skating, Alpine Skiing, Field Hockey, Cross Country Skiing | Speed-dominant, concentrated force delivery |
+| **Tank** | Wrestling, Judo, Wheelchair Rugby | Direct physical domination, positional control, damage absorption |
+| **DPS (Burst)** | Speed Skating, Alpine Skiing, Field Hockey, Nordic Skiing | Speed-dominant, concentrated force delivery |
 | **DPS (DoT)** | Decathlon, Pentathlon, Steeplechase, Rowing | Endurance-dominant, sustained multi-phase output |
 | **Support** | Volleyball, Sitting Volleyball, Basketball, Lacrosse | Team-centric, playmaking, enabling teammates |
-| **Controller** | Shooting, Equestrianism | Precision-dominant, environmental mastery, spatial control |
+| **Controller** | Shooting, Equestrianism, Track & Field | Precision-dominant, environmental mastery, spatial control |
 
 ---
 
@@ -177,23 +171,13 @@ Every portrait was generated using Google's Imagen API with the following enforc
 
 | Constraint | Rule | Reason |
 |-----------|------|--------|
-| **Subject Count** | Strictly ONE single athlete | Prevents phantom opponents or teammates |
+| **Subject Count** | Strictly ONE single anonymous athlete | Prevents phantom opponents or teammates |
 | **Facial Expression** | Neutral, calm, stoic | Avoids aggressive grimacing; fits tactical TCG tone |
-| **Skin Tone** | Natural human tones only | Prevents AI color-bleeding from accent palettes |
-| **Limb Count** | Explicitly "exactly two arms" | Prevents anatomical hallucinations |
+| **Anonymity** | Vector-comic abstraction | No real-world identities or likenesses |
 | **Text/Logos** | Absolutely none | Clean compositing into the React card frame |
-| **Background** | Solid white | Easy integration; gradient applied by the CSS layer |
+| **Background** | Clean Gradient | Provided by the TCG design system |
 | **Style** | 2D flat-color vector-comic, industrial-punk | Consistent across all 20 portraits |
 | **Gear** | Sport-specific, futuristic | Cybernetic enhancements integrated into sport equipment |
-
-### Tier-Specific Accent Colors in Prompts
-
-| Tier | Accent Color Used in Prompt |
-|------|---------------------------|
-| Legendary | Neon Purple, Electric Blue, Aqua Blue, Jade Green, Crimson (per archetype) |
-| Epic | Same archetype-based accents |
-| Rare | Pastel Blue (unified) |
-| Common | Pastel Green (unified) |
 
 ---
 

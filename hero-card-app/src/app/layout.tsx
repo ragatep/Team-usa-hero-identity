@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Digital Mirror // Team USA Hero Identity",
-  description: "An MMO-inspired trading card experience that transforms Olympic & Paralympic athletes into cyberpunk hero-operatives. Built with Vertex AI, BigQuery, and Next.js for the Google Cloud Hackathon 2026.",
+  title: "Team USA: Hero Identity // Digital Mirror",
+  description: "Interactive AI-powered trading card experience for Team USA athletes.",
 };
 
 export default function RootLayout({

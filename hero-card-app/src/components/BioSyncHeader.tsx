@@ -11,6 +11,8 @@ export const BioSyncHeader = () => {
   // Separate state for Feet and Inches when in Imperial mode
   const [localFeet, setLocalFeet] = useState(0);
   const [localInches, setLocalInches] = useState(0);
+  const [isSyncing, setIsSyncing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // Initialize local state when modal opens
   useEffect(() => {
@@ -51,8 +53,26 @@ export const BioSyncHeader = () => {
   }, [localFeet, localInches]);
 
   const handleSync = () => {
-    updateBio(localBio);
-    setIsOpen(false);
+    // Basic Validation
+    if (localBio.height <= 0 || localBio.weight <= 0 || localBio.age <= 0) {
+      setError('CRITICAL ERROR: BIOMETRIC DATA INCOMPLETE');
+      return;
+    }
+
+    if (localBio.age > 120) {
+      setError('OUT-OF-RANGE: AGE EXCEEDS HUMAN PARAMETERS');
+      return;
+    }
+
+    setError(null);
+    setIsSyncing(true);
+
+    // Simulate high-tech biometric scan
+    setTimeout(() => {
+      updateBio(localBio);
+      setIsSyncing(false);
+      setIsOpen(false);
+    }, 1500);
   };
 
   // Validation Helpers
@@ -78,7 +98,7 @@ export const BioSyncHeader = () => {
           </h1>
           <div className="flex items-center gap-4">
             <p className="text-[#E20074] font-mono tracking-[0.3em] text-sm uppercase font-bold">
-              Team USA // Hero Identity Database
+              Official Project: Team USA Hero Identity
             </p>
             <div className="h-[2px] w-20 bg-white/10" />
             <div className={`h-3 w-3 rounded-full animate-pulse ${userBio.isSynced ? 'bg-green-500' : 'bg-[#E20074]'}`} title={userBio.isSynced ? 'Synced' : 'Not Synced'} />
@@ -129,7 +149,10 @@ export const BioSyncHeader = () => {
                     min="0"
                     onKeyDown={preventInvalidChars}
                     value={localBio.height || ''}
-                    onChange={(e) => setLocalBio({...localBio, height: parsePositiveInt(e.target.value)})}
+                      onChange={(e) => {
+                        setLocalBio({...localBio, height: parsePositiveInt(e.target.value)});
+                        setError(null);
+                      }}
                     className="w-full bg-black border border-white/20 p-3 text-white font-mono focus:border-[#E20074] outline-none"
                     placeholder="0"
                   />
@@ -176,7 +199,10 @@ export const BioSyncHeader = () => {
                   min="0"
                   onKeyDown={preventInvalidChars}
                   value={localBio.weight || ''}
-                  onChange={(e) => setLocalBio({...localBio, weight: parsePositiveInt(e.target.value)})}
+                  onChange={(e) => {
+                    setLocalBio({...localBio, weight: parsePositiveInt(e.target.value)});
+                    setError(null);
+                  }}
                   className="w-full bg-black border border-white/20 p-3 text-white font-mono focus:border-[#E20074] outline-none"
                   placeholder="0"
                 />
@@ -196,16 +222,27 @@ export const BioSyncHeader = () => {
                 />
               </div>
 
+              {error && (
+                <div className="bg-[#E20074]/10 border border-[#E20074] p-3 text-[#E20074] text-[10px] font-black uppercase tracking-tighter animate-pulse">
+                  {error}
+                </div>
+              )}
+
               <div className="flex gap-4 pt-4">
                 <button 
                   onClick={handleSync}
-                  className="flex-1 bg-white text-black font-black uppercase py-4 hover:bg-[#E20074] hover:text-white transition-colors"
+                  disabled={isSyncing}
+                  data-text={isSyncing ? 'SCANNING...' : 'CONFIRM SYNC'}
+                  className={`flex-1 relative font-black uppercase py-4 transition-all overflow-hidden ${isSyncing ? 'bg-[#E20074] text-white animate-pulse cursor-wait' : 'bg-white text-black hover:bg-[#E20074] hover:text-white glitch-button glitch-hover'}`}
                 >
-                  Confirm Sync
+                  <span className="relative z-10">
+                    {isSyncing ? 'SCANNING...' : 'CONFIRM SYNC'}
+                  </span>
                 </button>
                 <button 
                   onClick={() => setIsOpen(false)}
-                  className="px-6 border border-white/20 text-white font-bold uppercase transition-colors hover:bg-white/5"
+                  disabled={isSyncing}
+                  className="px-6 border border-white/20 text-white font-bold uppercase transition-colors hover:bg-white/5 disabled:opacity-50"
                 >
                   Cancel
                 </button>

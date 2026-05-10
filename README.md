@@ -1,10 +1,14 @@
-# DIGITAL MIRROR // TEAM USA HERO IDENTITY
+# Team USA: Hero Identity
+## Digital Mirror // TCG Evolution
 
-> *What if the world's greatest Olympic and Paralympic athletes were reborn as cyberpunk operatives in a neon-drenched MMO?*
+> [!TIP]
+> **View this project on Devpost:** [Team USA: Hero Identity](https://devpost.com/software/team-usa-hero-identity)
 
-**Digital Mirror** is an interactive trading card experience that transforms 20 real Team USA athletes into fully realized cyberpunk hero-operatives — complete with AI-generated portraits, MMO-inspired archetypes, rarity tiers, and a personalized biometric comparison system.
+> *What if the world's greatest Olympic and Paralympic archetypes were reborn as cyberpunk operatives in a neon-drenched MMO?*
 
-Built for the **Google Cloud Hackathon 2026**, this project showcases the power of Vertex AI, BigQuery, and generative AI to reimagine Olympic heritage through the lens of gaming culture.
+**Digital Mirror** is an interactive trading card experience that transforms athletic excellence into 20 fully realized cyberpunk hero-operatives — featuring high-fidelity AI portraits, MMO-inspired archetypes, and a personalized biometric comparison system.
+
+Built for the **Google Cloud Hackathon 2026**, this project showcases the power of Vertex AI, BigQuery, and generative AI to reimagine athletic heritage through the lens of gaming culture, while maintaining a **100% anonymous, data-driven approach**.
 
 ![Digital Mirror — Hero Grid Overview](docs/images/hero_grid_overview.png)
 
@@ -23,16 +27,17 @@ Built for the **Google Cloud Hackathon 2026**, this project showcases the power 
 
 ## What is Digital Mirror?
 
-Digital Mirror bridges the gap between **Olympic athletics** and **gaming culture** by asking a simple question: *How do you stack up against the greatest athletes in history?*
+Digital Mirror bridges the gap between **international athletics** and **gaming culture** by asking a simple question: *How do you stack up against the greatest archetypes in history?*
 
-Every card in the system represents a real athlete from the Olympic or Paralympic Games. Their biographical data — height, weight, age, sport, medal count — is sourced from a cleaned BigQuery dataset and used to generate:
+Every card in the system represents the physical "DNA" of an Olympic or Paralympic discipline. Utilizing anonymous biographical data — height, weight, age, sport, medal count — the system generates:
 
-- **Rarity Tiers** based on medal achievements (Legendary, Epic, Rare, Common)
-- **MMO Archetypes** mapped from their sport discipline (Tank, DPS, Support, Controller)
-- **Character Lore** and **Combat Abilities** written in the style of a cyberpunk MMO
-- **AI-Generated Portraits** using Google's Imagen API with a refined industrial-punk prompt pipeline
+- **Olympic & Paralympic Parity**: A balanced roster of 16 Olympic and 4 Paralympic hero-archetypes across all rarity tiers.
+- **Rarity Tiers** based on historical achievement (Legendary, Epic, Rare, Common).
+- **MMO Archetypes** mapped from their sport discipline (Tank, DPS, Support, Controller).
+- **Character Lore** and **Combat Abilities** synthesized by Vertex AI.
+- **AI-Generated Portraits** using **Vertex AI Imagen 3** with a refined industrial-punk prompt pipeline.
 
-The user can then **sync their own biometrics** (height, weight, age) to see how they compare to each hero-athlete, with real-time "Diff Math" displayed on every card.
+The user can then **sync their own biometrics** (height, weight, age) to see how they compare to each hero-archetype, with real-time "Diff Math" calculated in both **Metric** and **Imperial** units.
 
 ---
 
@@ -40,11 +45,11 @@ The user can then **sync their own biometrics** (height, weight, age) to see how
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
-| **Data Pipeline** | Google BigQuery | Cleaned and normalized Olympic/Paralympic athlete datasets |
+| **Data Pipeline** | Google BigQuery | Anonymous Olympic/Paralympic athlete metadata |
 | **AI Generation** | Vertex AI (Gemini 3.1 Pro) | Character lore, ability descriptions, archetype mapping |
-| **Art Generation** | Imagen API (gemini-3.1-flash-image) | 20 high-fidelity vector-comic character portraits |
-| **Frontend** | Next.js 16 + React 19 | Interactive 3D card-flip UI with expanded modal views |
-| **Styling** | Tailwind CSS | Responsive 5×4 grid layout with dynamic neon glow effects |
+| **Art Generation** | Vertex AI (Imagen 3) | 20 high-fidelity vector-comic character portraits |
+| **Frontend** | Next.js 16.2 + React 19.2 | Interactive 3D card-flip UI with expanded modal views |
+| **Styling** | Tailwind CSS 4.0 | Responsive 5×4 grid layout with dynamic neon glow effects |
 | **State Management** | React Context API | Global biometric sync with Metric/Imperial unit toggle |
 
 ---
@@ -74,27 +79,24 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 
 ## FAQ
 
+### Is there any personal identification in this project?
+No. **Digital Mirror is 100% anonymous.** The system utilizes purely physical metadata (height, weight, etc.) and historical records. No real-world names, personal identities, or likenesses of individual athletes are included.
+
 ### What is the "Re-Sync Biometrics" feature?
-It's the core interactive feature of Digital Mirror. By entering your own height, weight, and age, the system compares your physical stats against each hero-athlete and displays the difference (in green or red) on every card's Bio-Sheet. It supports both **Metric** (cm/kg) and **Imperial** (ft/in/lbs) unit systems.
+It's the core interactive feature of Digital Mirror. By entering your own height, weight, and age, the system compares your physical stats against each hero-archetype and displays the difference (in green or red) on every card's Bio-Sheet.
 
 ### How were the rarity tiers determined?
-Rarity is based on real medal data from the athlete's Olympic/Paralympic career:
+Rarity is based on real-world medal data associated with the anonymous discipline profile:
 - **Legendary** — Multiple Gold Medals
 - **Epic** — Single Gold Medal
 - **Rare** — Silver or Bronze Medals
 - **Common** — Participant (No Medal)
 
 ### How were the MMO archetypes assigned?
-Each athlete's sport was mapped to a traditional MMO role based on the physical demands and tactical nature of their discipline. For example, Wrestlers and Judoka map to **Tank** (frontline defense), while Sprinters and Skiers map to **DPS** (burst damage). See the [Theme Guide](THEME_GUIDE.md) for the full breakdown.
+Each sport was mapped to a traditional MMO role based on physical demands. For example, Wrestlers and Judoka map to **Tank** (frontline defense), while Sprinters and Skiers map to **DPS** (burst damage).
 
 ### How were the portraits generated?
-All 20 character portraits were generated using Google's Imagen API with a highly refined prompt pipeline. Each prompt enforced strict constraints: a single solitary athlete, stoic facial expression, industrial-punk aesthetic, sport-specific gear, and a clean solid background for perfect compositing into the card UI. See the [Theme Guide](THEME_GUIDE.md#art-direction) for details.
-
-### Can I add my own athletes?
-Yes! The system is data-driven. Simply add a new entry to `hero-card-app/src/data/hero_identities.json` following the existing schema, generate a portrait, and place it in `public/assets/heroes/`.
-
-### What data sources were used?
-The athlete dataset was sourced from publicly available Olympic and Paralympic records, cleaned and normalized via Google BigQuery, and enriched with AI-generated lore using Vertex AI (Gemini 3.1 Pro).
+All 20 character portraits were generated using **Vertex AI Imagen 3**. Each prompt enforced strict constraints: a single solitary anonymous athlete, stoic facial expression, and an industrial-punk aesthetic.
 
 ---
 
@@ -103,14 +105,16 @@ The athlete dataset was sourced from publicly available Olympic and Paralympic r
 | Document | Description |
 |----------|-------------|
 | [GUIDE.md](GUIDE.md) | Reading your cards + How to use Re-Sync Biometrics |
-| [THEME_GUIDE.md](THEME_GUIDE.md) | Rarity tiers, MMO archetypes, art direction, and world-building |
+| [THEME_GUIDE.md](THEME_GUIDE.md) | Rarity tiers, MMO archetypes, and art direction |
 
 ---
 
 ## Credits
 
-- **Data Source**: Olympic & Paralympic athlete records via Google BigQuery
-- **AI Models**: Vertex AI (Gemini 3.1 Pro) for text generation, Imagen API for portrait generation
-- **Framework**: Next.js 16 with React 19
+- **Data Source**: Anonymous Olympic & Paralympic historical records via Google BigQuery
+- **AI Models**: Vertex AI (Gemini 3.1 Pro & Imagen 3)
+- **Framework**: Next.js 16.2 with React 19.2
 - **Project**: Google Cloud Hackathon 2026 — Project: Hero Identity
 - **System Status**: Optimal ■
+
+

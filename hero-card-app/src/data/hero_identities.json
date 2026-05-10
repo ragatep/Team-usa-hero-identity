@@ -1,32 +1,31 @@
 [
   {
-    "Name": "Monika Rieder",
-    "Sex": "F",
-    "Age": 29,
-    "Height": "175",
-    "Weight": "75",
-    "Sport": "Shooting",
-    "Event": "Shooting Women's Air Pistol, 10 metres",
+    "Sex": "M",
+    "Age": 35,
+    "Height": "NA",
+    "Weight": "NA",
+    "Sport": "Para Track and Field",
+    "Event": "N/A",
     "Medal": "NA",
-    "Year": 2004,
-    "Origin": "Olympic",
+    "Year": 2012,
+    "Origin": "Paralympic",
     "Rarity": "Common",
     "Archetype": "Controller",
-    "STRENGTH": 61,
-    "SPEED": 76,
-    "PRECISION": 96,
-    "UTILITY": 81,
-    "ENDURANCE": 51.0,
-    "alias": "The Chrome Caliber",
-    "imagePath": "/assets/heroes/common_controller_rieder_1778161211466.png",
-    "lore": "Operating from the neon-drenched shadows of the 2004 megacity grid, Monika is a tactical operative who dictates the exact flow of any corporate skirmish. Utilizing state-of-the-art optical firmware and cold-blooded calculation, she surveys and locks down entire sectors before the enemy even draws their weapons. Her notoriously steady hand ensures that every high-stakes engagement ends exactly as her combat algorithms predict.",
+    "STRENGTH": 45,
+    "SPEED": 82,
+    "PRECISION": 88,
+    "UTILITY": 92,
+    "ENDURANCE": 65,
+    "alias": "The Signal Phantom",
+    "imagePath": "/assets/heroes/common_controller_mmo.png",
+    "lore": "The Signal Phantom is a high-velocity tactical operative who weaponizes track-grade speed to dominate the grid's sensory layers. Utilizing state-of-the-art cybernetic blades, he zips through enemy sectors at blinding speeds, deploying a wake of neural-interference that masks his squad's presence. He is a ghost in the machine, proving that the fastest way to control a battlefield is to be everywhere at once before the enemy's optics can even lock on.",
     "ability": {
-      "name": "Pneumatic Center-Punch",
-      "description": "Monika recalibrates her customized air-pistol's micro-pneumatics to fire a hyper-compressed, high-density slug with perfect trajectory. Striking the enemy's exact structural weak point, this precision shot instantly applies a 'System Override' debuff to the primary target while projecting a 10-meter holographic lockdown zone that scrambles the targeting arrays and dramatically reduces the movement speed of all hostiles caught within her line of sight."
+      "name": "Slipstream Scramble",
+      "summary": "Dashes at hyper-speed, trailing a 20m wake of neural-interference that blinds enemy sensors and grants 'Haste' to allies.",
+      "description": "The Signal Phantom overclocks his cybernetic blades to initiate a high-G sprint across the sector. This movement trails a 20-meter wake of corrosive neural-interference that instantly blinds hostile targeting arrays and scrambles their minimaps. Allies caught in his slipstream receive a massive 'Haste' buff, allowing the squad to capitalize on the enemy's sensory blackout with lethal efficiency."
     }
   },
   {
-    "Name": "Bertil Vilhelm Rnnmark",
     "Sex": "M",
     "Age": 26,
     "Height": "NA",
@@ -42,17 +41,17 @@
     "SPEED": 67,
     "PRECISION": 87,
     "UTILITY": 72,
-    "ENDURANCE": 42.0,
+    "ENDURANCE": 42,
     "alias": "Zero-Drift Sentinel",
-    "imagePath": "/assets/heroes/epic_controller_ronnmark_1778160050584.png",
-    "lore": "Dug out from the encrypted 1932 Archives, Rnnmark is an elite marksman from the pioneer era of ballistic cyber-warfare. Utilizing archaic but flawlessly tuned optical wetware, he commands the battlefield from the shadows, dictating enemy movement with chilling precision. He operates as the ultimate overwatch for the resistance, turning chaotic skirmishes into calculated executions.",
+    "imagePath": "/assets/heroes/epic_controller_mmo.png",
+    "lore": "Dug out from the encrypted 1932 Archives, Zero-Drift Sentinel is an elite marksman from the pioneer era of ballistic cyber-warfare. Utilizing archaic but flawlessly tuned optical wetware, he commands the battlefield from the shadows, dictating enemy movement with chilling precision. He operates as the ultimate overwatch for the resistance, turning chaotic skirmishes into calculated executions.",
     "ability": {
       "name": "Prone Axis Lock",
-      "description": "Entering a stabilized prone stance, Rnnmark roots himself to the grid and projects a 50-meter tactical suppression zone. Enemies caught in this field suffer a severe movement penalty and are stripped of cloaking tech. If a hostile target attempts to use a movement or burst ability, Rnnmark automatically fires a small-bore kinetic disruptor, interrupting the cast and applying a 4-second system reboot."
+      "summary": "Projects a 50m suppression zone that strips enemy cloaking and auto-fires a disruptor to interrupt hostile abilities.",
+      "description": "Entering a stabilized prone stance, Zero-Drift Sentinel roots himself to the grid and projects a 50-meter tactical suppression zone. Enemies caught in this field suffer a severe movement penalty and are stripped of cloaking tech. If a hostile target attempts to use a movement or burst ability, Zero-Drift Sentinel automatically fires a small-bore kinetic disruptor, interrupting the cast and applying a 4-second system reboot."
     }
   },
   {
-    "Name": "Nils Gustaf Fredrik Bror \"Hans\" von Blixen-Finecke, Jr.",
     "Sex": "M",
     "Age": 35,
     "Height": "NA",
@@ -68,17 +67,17 @@
     "SPEED": 66,
     "PRECISION": 86,
     "UTILITY": 71,
-    "ENDURANCE": 41.0,
+    "ENDURANCE": 41,
     "alias": "The Chrome Cavalier",
-    "imagePath": "/assets/heroes/legendary_controller_blixen.png",
-    "lore": "A Legendary engram recovered from the '52 Golden Era archives, Hans dominates the grid as a high-society tactician neurally bonded to a custom-tuned synthetic thoroughbred. With aristocratic lethality and flawless tactical synchronization, he manipulates battlefield geometry, transforming chaotic neon warzones into his own meticulously controlled arena.",
+    "imagePath": "/assets/heroes/legendary_controller_mmo.png",
+    "lore": "A Legendary engram recovered from the '52 Golden Era archives, The Chrome Cavalier dominates the grid as a high-society tactician neurally bonded to a custom-tuned synthetic thoroughbred. With aristocratic lethality and flawless tactical synchronization, he manipulates battlefield geometry, transforming chaotic neon warzones into his own meticulously controlled arena.",
     "ability": {
       "name": "Cross-Country Overwrite",
-      "description": "Hans initiates a multi-phase terrain manipulation sequence, commanding his mount to trample enemy control points and rewrite the battlefield's topography. This applies a massive AoE root to all hostile units caught in his pathing, instantly nullifying their environmental buffs and forcing them into a strict tactical lockdown."
+      "summary": "Commands his mount to trample control points, applying a massive AoE root and nullifying enemy environmental buffs.",
+      "description": "The Chrome Cavalier initiates a multi-phase terrain manipulation sequence, commanding his mount to trample enemy control points and rewrite the battlefield's topography. This applies a massive AoE root to all hostile units caught in his pathing, instantly nullifying their environmental buffs and forcing them into a strict tactical lockdown."
     }
   },
   {
-    "Name": "Jos Paulino Marecos Mouzinho de Albuquerque",
     "Sex": "M",
     "Age": 42,
     "Height": "NA",
@@ -94,17 +93,17 @@
     "SPEED": 74,
     "PRECISION": 94,
     "UTILITY": 79,
-    "ENDURANCE": 49.0,
+    "ENDURANCE": 49,
     "alias": "The Apex Cavalier",
-    "imagePath": "/assets/heroes/rare_controller_albuquerque_1778160894454.png",
-    "lore": "A master of mechanized beast-taming from the early terrestrial jump-programs, Albuquerque rides an elite cyber-steed into the neon-drenched fray. As a veteran tactician of the Resistance, he commands the high ground, dictating the flow of battle with flawless, calculated maneuvers.",
+    "imagePath": "/assets/heroes/rare_controller_mmo.png",
+    "lore": "A master of mechanized beast-taming from the early terrestrial jump-programs, The Apex Cavalier rides an elite cyber-steed into the neon-drenched fray. As a veteran tactician of the Resistance, he commands the high ground, dictating the flow of battle with flawless, calculated maneuvers.",
     "ability": {
       "name": "Oxer Overdrive Protocol",
-      "description": "Commanding his mount to execute a high-altitude vault, the Cavalier bypasses enemy frontlines and deploys a sprawling network of hard-light hurdles upon landing. This field manipulation locks enemies into tight choke points, applies a severe movement debuff, and interrupts enemy casting, allowing his squad to systematically dismantle the opposition."
+      "summary": "Vaults over frontlines on his mount, deploying hard-light barriers that lock enemies into choke points and interrupt casting.",
+      "description": "Commanding his mount to execute a high-altitude vault over enemy frontlines, the Cavalier deploys a network of hard-light 'Oxer' barriers upon landing. This manipulation locks hostiles into tight choke points and applies a severe movement debuff, allowing his squad to systematically dismantle the opposition."
     }
   },
   {
-    "Name": "Bo Arne Christer Johansson",
     "Sex": "M",
     "Age": 25,
     "Height": "173",
@@ -120,43 +119,43 @@
     "SPEED": 96,
     "PRECISION": 76,
     "UTILITY": 86,
-    "ENDURANCE": 51.0,
+    "ENDURANCE": 51,
     "alias": "The Glacial Phantom",
-    "imagePath": "/assets/heroes/common_dps_johansson_1778204379255.png",
-    "lore": "Operating in the deep-freeze sectors of the urban tundra, Johansson is a relentless pursuit specialist known for outrunning corporate kill-squads across grueling thirty-kilometer stretches. Utilizing bleeding-edge thermal-regulation gear, he maintains lethal burst-speed in environments where standard mechanization freezes solid. He is a ghost in the snow, striking fast and vanishing before the enemy's biometric monitors flatline.",
+    "imagePath": "/assets/heroes/common_dps_mmo.png",
+    "lore": "Operating in the urban tundra, The Glacial Phantom is a pursuit specialist who outruns corporate kill-squads across grueling thirty-kilometer stretches. Utilizing bleeding-edge thermal-regulation gear, he maintains lethal burst-speed in environments where standard mechanization freezes solid. He is a ghost in the snow, striking fast and vanishing before biometric monitors can flatline.",
     "ability": {
       "name": "Double-Pole Kinetic Strike",
-      "description": "Johansson thrusts forward using dual neuro-carbon poles to deliver a devastating burst of focused physical damage. This high-velocity maneuver shatters standard armor plating, staggering the target and instantly resetting Johansson's evasion cooldowns to maintain relentless DPS pressure."
+      "summary": "Thrusts forward with dual neuro-carbon poles, shattering armor plating and resetting evasion cooldowns.",
+      "description": "The Glacial Phantom thrusts forward using dual neuro-carbon poles to deliver a concentrated burst of kinetic damage. This high-velocity maneuver shatters standard armor plating, staggering the target and instantly resetting The Glacial Phantom's evasion cooldowns to maintain relentless frontline pressure."
     }
   },
   {
-    "Name": "Phillip Ferdinand \"Phil\" Mahre",
-    "Sex": "M",
-    "Age": 26,
-    "Height": "175",
-    "Weight": "77",
-    "Sport": "Alpine Skiing",
-    "Event": "Alpine Skiing Men's Slalom",
+    "Sex": "NA",
+    "Age": 36,
+    "Height": "5'8\"",
+    "Weight": "NA",
+    "Sport": "Para Nordic Skiing",
+    "Event": "LW12",
     "Medal": "Gold",
-    "Year": 1984,
-    "Origin": "Olympic",
+    "Year": 2012,
+    "Origin": "Paralympic",
     "Rarity": "Epic",
     "Archetype": "DPS",
-    "STRENGTH": 62,
-    "SPEED": 87,
-    "PRECISION": 67,
-    "UTILITY": 77,
-    "ENDURANCE": 42.0,
-    "alias": "The Frost-Edge Phantom",
-    "imagePath": "/assets/heroes/epic_dps_mahre_1778160066173.png",
-    "lore": "An elite operative hailing from the frozen peaks of Sector 84, Mahre mastered the art of high-velocity descent long before the neo-corporate wars. His unmatched kinetic maneuvering allowed him to slice through fortified enemy barricades with razor-thin precision, leaving nothing but shattered ice and glowing neon trails in his wake.",
+    "STRENGTH": 68,
+    "SPEED": 92,
+    "PRECISION": 85,
+    "UTILITY": 75,
+    "ENDURANCE": 95,
+    "alias": "Multi-Spectral Stryder",
+    "imagePath": "/assets/heroes/epic_dps_mmo.png",
+    "lore": "A multi-phase operative decanted from the elite Winter and Summer programs, Multi-Spectral Stryder is a relentless damage-dealer across all terrains. Whether navigating the urban tundra or the neon highways, her overclocked kinetic drives deliver a continuous barrage of high-velocity strikes. She is the living embodiment of multi-core combat synchronization, outlasting enemies through sheer efficiency and unbreakable momentum.",
     "ability": {
-      "name": "Zero-Friction Cross-Block",
-      "description": "Entering a hyper-accelerated descent state, the operative ignores all environmental movement penalties and rapidly zigs-zags through the enemy frontline. By violently parrying incoming attacks with a tactical cross-block, he builds up kinetic energy before unleashing a devastating, high-burst critical strike on his primary target."
+      "name": "Omni-Gait Overdrive",
+      "summary": "Overclocks kinetic drives to launch a rapid-fire sequence of armor-piercing strikes while gaining 40% haste.",
+      "description": "Multi-Spectral Stryder initiates an 'Omni-Gait Overdrive' sequence, drawing power from her synchronized multi-core reactors. This grants her a 40% Haste buff and enables a rapid-fire barrage of armor-piercing kinetic strikes that bypass 30% of target defense, dealing massive sustained DPS until the enemy system suffers total catastrophic failure."
     }
   },
   {
-    "Name": "Catriona Ann Le May Doan",
     "Sex": "F",
     "Age": 31,
     "Height": "170",
@@ -172,17 +171,17 @@
     "SPEED": 99,
     "PRECISION": 79,
     "UTILITY": 89,
-    "ENDURANCE": 54.0,
+    "ENDURANCE": 54,
     "alias": "The Cryo-Velocity Phantom",
-    "imagePath": "/assets/heroes/legendary_dps_doan_1778160473937.png",
-    "lore": "Operating out of the hyper-cooled sectors of the Northern Spire, Catriona is a legendary strike operative known for leaving only a slipstream of frozen neon in her wake. Her mastery of frictionless kinetic acceleration allows her to shatter elite corporate hit-squads before their optics can even register a threat. To the syndicate bosses who fear her, she is the sudden chill down their spine right before the blackout.",
+    "imagePath": "/assets/heroes/legendary_dps_mmo.png",
+    "lore": "Operating out of the hyper-cooled Northern Spire, The Cryo-Velocity Phantom is a legendary strike operative who leaves only a slipstream of frozen neon in her wake. Her mastery of frictionless kinetic acceleration allows her to shatter elite corporate hit-squads before their optics can even register a threat. To the syndicate bosses who fear her, she is the sudden chill down their spine right before the total blackout.",
     "ability": {
       "name": "Kinetic Crossover Strike",
-      "description": "Channeling raw kinetic energy through her frictionless mono-molecular blades, she enters a burst-speed dash that renders her temporarily untargetable. By executing a series of high-G crossover steps to build maximum momentum, she unleashes a concentrated, armor-piercing slash that deals massive burst DPS and leaves the target suffering from a 'Sub-Zero Fracture' vulnerability debuff."
+      "summary": "Dashes at burst-speed while untargetable, then unleashes an armor-piercing slash inflicting 'Sub-Zero Fracture'.",
+      "description": "Channelling raw kinetic energy through her frictionless mono-molecular blades, she enters a burst-speed dash that renders her temporarily untargetable. By executing a series of high-G crossover steps to build maximum momentum, she unleashes a concentrated, armor-piercing slash that deals massive burst DPS and leaves the target suffering from a 'Sub-Zero Fracture' vulnerability debuff."
     }
   },
   {
-    "Name": "Laura Bartlett",
     "Sex": "F",
     "Age": 24,
     "Height": "169",
@@ -198,17 +197,17 @@
     "SPEED": 94,
     "PRECISION": 74,
     "UTILITY": 84,
-    "ENDURANCE": 49.0,
+    "ENDURANCE": 49,
     "alias": "The Neon Sweeper",
-    "imagePath": "/assets/heroes/rare_dps_bartlett_1778160906715.png",
-    "lore": "Forged in the grid-fires of the 2012 sector conflicts, Bartlett is a high-velocity shock operative who turns the battlefield into her own personal strike zone. Wielding a carbon-weave kinetic driver, her relentless frontline assaults famously shattered elite defense formations to secure a Bronze-tier combat rating. She now operates as a prime damage dealer, exploiting micro-seconds of tactical vulnerability with lethal, high-impact precision.",
+    "imagePath": "/assets/heroes/rare_dps_mmo.png",
+    "lore": "Forged in the grid-fires of the 2012 sector conflicts, The Neon Sweeper is a high-velocity shock operative who turns the battlefield into her own personal strike zone. Wielding a carbon-weave kinetic driver, her relentless frontline assaults shattered elite defense formations to secure a Bronze-tier combat rating. She now operates as a prime damage dealer, exploiting micro-seconds of tactical vulnerability with lethal precision.",
     "ability": {
       "name": "Overcharged Tomahawk Strike",
-      "description": "Bartlett executes a rapid reverse-stick kinetic slash, launching a compressed energy projectile at terminal velocity. This high-impact DPS burst instantly bypasses standard armor plating, dealing massive critical damage to a single target while applying a centralized 'Stagger' effect that disrupts enemy casting."
+      "summary": "Launches a compressed energy projectile that bypasses armor, dealing massive critical damage and staggering the target.",
+      "description": "The Neon Sweeper executes a rapid reverse-stick kinetic slash, launching a compressed energy projectile at terminal velocity. This high-impact 'Tomahawk' burst instantly bypasses standard armor plating, dealing massive critical damage to a single target while applying a centralized 'Stagger' effect that disrupts enemy casting."
     }
   },
   {
-    "Name": "Botjan Bu",
     "Sex": "M",
     "Age": 24,
     "Height": "176",
@@ -224,17 +223,17 @@
     "SPEED": 76,
     "PRECISION": 66,
     "UTILITY": 41,
-    "ENDURANCE": 86.0,
+    "ENDURANCE": 86,
     "alias": "The Trench Runner",
-    "imagePath": "/assets/heroes/common_dot_buc_1778204393839.png",
-    "lore": "A rapid-assault operative engineered for the grueling urban marathons of the neon sprawl. Botjan relies on bio-woven endurance fibers to outlast corporate pursuit, navigating barricades and flooded hazard zones with frictionless momentum. He exhausts pursuers in prolonged chases, bleeding out their stamina until they collapse in his slipstream.",
+    "imagePath": "/assets/heroes/common_dot_mmo.png",
+    "lore": "A rapid-assault operative engineered for the grueling urban marathons of the neon sprawl. The Trench Runner relies on bio-woven endurance fibers to outlast corporate pursuit, navigating barricades and flooded hazard zones with frictionless momentum. He exhausts pursuers in prolonged chases, bleeding out their stamina until they collapse in his slipstream.",
     "ability": {
       "name": "Hydro-Vault Slipstream",
-      "description": "Executes a high-velocity leap over enemy defensive constructs, trailing a corrosive nano-fluid wake behind him. Hostiles caught in the residual hydro-trail suffer compounding Damage over Time (DoT) to their armor plating while Botjan's evasion matrix receives a sustained tactical buff."
+      "summary": "Leaps over defenses, trailing corrosive nano-fluid that applies compounding DoT while boosting his evasion.",
+      "description": "Executes a high-velocity vault over enemy defensive constructs, trailing a corrosive nano-fluid wake behind him. Hostiles caught in the residual hydro-trail suffer compounding Damage over Time (DoT) to their armor plating while The Trench Runner's evasion matrix receives a sustained tactical buff."
     }
   },
   {
-    "Name": "Robert Zmlk",
     "Sex": "M",
     "Age": 23,
     "Height": "186",
@@ -250,17 +249,17 @@
     "SPEED": 86,
     "PRECISION": 76,
     "UTILITY": 51,
-    "ENDURANCE": 96.0,
+    "ENDURANCE": 96,
     "alias": "The Omni-Phase Vanguard",
-    "imagePath": "/assets/heroes/epic_dot_zmelik_1778160090882.png",
-    "lore": "Operative Zmlk is a legendary survivor of the '92 neon-skirmishes, possessing ten distinct combat-athletic subroutines hardwired into his neural cortex. Operating as the ultimate tactical generalist, his 186cm biometric chassis is tuned for relentless, prolonged engagements that systematically exhaust corporate strike teams. He dictates the battlefield's tempo, bleeding high-threat targets dry through sheer, inescapable attrition.",
+    "imagePath": "/assets/heroes/epic_dot_mmo.png",
+    "lore": "The Omni-Phase Vanguard is a legendary survivor possessing ten distinct combat subroutines hardwired into his neural cortex. Operating as the ultimate tactical generalist, his biometric chassis is tuned for relentless, prolonged engagements that systematically exhaust corporate strike teams. He dictates the battlefield's tempo, bleeding high-threat targets dry through sheer, inescapable attrition.",
     "ability": {
       "name": "Bell-Lap Lactic Cascade",
-      "description": "Zmlk taps into his deep-reserve cyber-lungs mimicking the final 1500m sprint of a decathlon, initiating a high-speed kinetic pursuit that applies a stacking 'Lactic Burn' Damage over Time (DoT) effect. Each successive strike bypasses standard armor plating and slowly drains the target's stamina and action points. The longer the engagement lasts, the more exponentially the DoT ticks, guaranteeing the enemy's system completely crashes before they reach the finish line."
+      "summary": "Initiates a relentless pursuit applying stacking 'Lactic Burn' DoT that exponentially increases the longer the fight lasts.",
+      "description": "The Omni-Phase Vanguard taps into his deep-reserve bio-woven cyber-lungs to initiate a high-speed kinetic pursuit that applies a stacking 'Lactic Burn' Damage over Time (DoT) effect. Each successive strike bypasses standard armor plating and slowly drains the target's stamina and action points. The longer the engagement lasts, the more exponentially the DoT ticks, guaranteeing the enemy's system completely crashes before they reach the finish line."
     }
   },
   {
-    "Name": "Heidemarie \"Heide\" Rosendahl (-Ecker)",
     "Sex": "F",
     "Age": 25,
     "Height": "174",
@@ -276,17 +275,17 @@
     "SPEED": 77,
     "PRECISION": 67,
     "UTILITY": 42,
-    "ENDURANCE": 87.0,
+    "ENDURANCE": 87,
     "alias": "The Silver Pentarch",
-    "imagePath": "/assets/heroes/legendary_dot_rosendahl_1778160489754.png",
-    "lore": "Forged in the neon-drenched proving grounds of the '72 Grid, Heide is an elite multi-phase operative who outlasts and dismantles corporate kill-squads. By seamlessly hot-swapping between five distinct combat sub-routines, she grinds down high-value targets through relentless, sustained kinetic pressure. Her silver-tier neuro-link ensures she remains a lethal force on the battlefield long after her enemies' systems suffer critical thermal failure.",
+    "imagePath": "/assets/heroes/legendary_dot_mmo.png",
+    "lore": "Forged in the neon-drenched proving grounds of the '72 Grid, The Silver Pentarch is an elite multi-phase operative who outlasts and dismantles corporate kill-squads. By seamlessly hot-swapping between five distinct combat sub-routines, she grinds down high-value targets through relentless, sustained kinetic pressure. Her silver-tier neuro-link ensures she remains a lethal force long after her enemies' systems suffer critical thermal failure.",
     "ability": {
       "name": "Kinetic Pentathlon Cascade",
-      "description": "Heide initiates a five-stage overclocked sprint, dashing through enemy formations to inflict a stacking 'Thermal Burn' damage-over-time debuff on all targets caught in her slipstream. Each successive phase of the cascade refreshes the duration and amplifies the DoT tick rate, passively melting away enemy armor plating and draining their stamina reserves until their cybernetic cores completely shut down."
+      "summary": "Dashes through enemies in five phases, inflicting stacking 'Thermal Burn' DoT that amplifies with each stage.",
+      "description": "The Silver Pentarch initiates a five-stage overclocked hot-swap sequence, dashing through enemy formations to inflict a stacking 'Thermal Burn' DoT debuff on all targets caught in her slipstream. Each successive phase of the cascade refreshes the duration and amplifies the DoT tick rate, passively melting away enemy armor plating and draining their stamina reserves until their cybernetic cores completely shut down."
     }
   },
   {
-    "Name": "Nataliya Ivanovna Kazak",
     "Sex": "F",
     "Age": 20,
     "Height": "156",
@@ -302,17 +301,17 @@
     "SPEED": 76,
     "PRECISION": 66,
     "UTILITY": 41,
-    "ENDURANCE": 86.0,
+    "ENDURANCE": 86,
     "alias": "The Chrome Cadence",
-    "imagePath": "/assets/heroes/rare_dot_kazak_1778160926773.png",
-    "lore": "A master of hydro-tactics and synchronized assault, Nataliya cut her teeth navigating the toxic spillways of the mega-corporate zones. She uses her neural-rhythm tech to weave a web of relentless, stacking trauma that leaves rival hit-squads drowning in their own oil. Small in stature but lethal in sustained output, she is the deadliest metronome on the neon grid.",
+    "imagePath": "/assets/heroes/rare_dot_mmo.png",
+    "lore": "A master of hydro-tactics and synchronized assault, The Chrome Cadence cut her teeth navigating the toxic spillways of the mega-corporate zones. She uses her neural-rhythm tech to weave a web of relentless, stacking trauma that leaves rival hit-squads drowning in their own oil. Small in stature but lethal in sustained output, she is the deadliest metronome on the neon grid.",
     "ability": {
       "name": "The Crimson Catch & Drive",
-      "description": "Initiates a rhythmic, compounding assault that applies a stacking bio-corrosion damage-over-time (DoT) debuff to the target. With every cyclical 'Drive' phase, the DoT multiplier increases, melting through synthetic armor and draining enemy stamina pools as her stroke rate hits critical mass."
+      "summary": "Applies stacking bio-corrosion DoT that multiplies with each rhythmic 'Drive' phase, melting through armor.",
+      "description": "Initiates a rhythmic, compounding assault using her neural-rhythm link that applies a stacking bio-corrosion DoT to the target. With every cyclical 'Drive' phase, the DoT multiplier increases, melting through synthetic armor and draining enemy stamina pools as her stroke rate hits critical mass."
     }
   },
   {
-    "Name": "Manuel \"Manny\" Paner",
     "Sex": "M",
     "Age": 23,
     "Height": "185",
@@ -328,17 +327,17 @@
     "SPEED": 54,
     "PRECISION": 89,
     "UTILITY": 99,
-    "ENDURANCE": 82.0,
+    "ENDURANCE": 82,
     "alias": "The Chrome Conductor",
-    "imagePath": "/assets/heroes/common_support_paner_1778204406225.png",
-    "lore": "Operating in the neon-drenched underground circuits of the '72 sector, Manny served as the ultimate tactical node for elite strike teams. Utilizing his agile 185cm frame to map chaotic battlefields, he fed predictive targeting data and coordinated team movements in real-time. Though classified as a baseline operative, his flawless synergy and street-level grit turned countless doomed skirmishes into legendary victories.",
+    "imagePath": "/assets/heroes/common_support_mmo.png",
+    "lore": "Operating in the neon underground circuits of the '72 sector, The Chrome Conductor served as the ultimate tactical node for elite strike teams. Utilizing his agile frame to map chaotic battlefields, he fed predictive targeting data and coordinated team movements in real-time. Though classified as a baseline operative, his flawless synergy and street-level grit turned countless doomed skirmishes into legendary victories.",
     "ability": {
       "name": "No-Look Neural Pass",
-      "description": "Paner interfaces directly with the squad's combat network, instantly calculating optimal trajectory vectors to bypass enemy frontline aggro. He executes a high-velocity tactical distribution that grants a targeted ally a massive burst of Haste and a guaranteed Critical Strike on their next action, while simultaneously scrambling enemy radar tracking within the immediate AoE."
+      "summary": "Grants a targeted ally massive Haste and guaranteed Critical Strike while scrambling nearby enemy tracking.",
+      "description": "The Chrome Conductor interfaces directly with the squad's combat network, instantly calculating optimal trajectory vectors to bypass enemy frontline aggro. He executes a high-velocity 'No-Look' tactical distribution that grants a targeted ally a massive burst of Haste and a guaranteed Critical Strike on their next action, while simultaneously scrambling enemy radar tracking within the immediate AoE."
     }
   },
   {
-    "Name": "Hou Yuzhu",
     "Sex": "F",
     "Age": 25,
     "Height": "182",
@@ -356,15 +355,15 @@
     "UTILITY": 90,
     "ENDURANCE": 77.5,
     "alias": "The Aero-Link Vanguard",
-    "imagePath": "/assets/heroes/epic_support_hou_1778160104940.png",
-    "lore": "Operating from the shadowed neon courts of Sector 88, Hou acts as the tactical neural-anchor for elite Team USA strike operatives. Leveraging her 182cm frame and flawless aerial kinetics, she dictates the flow of battle by predicting enemy trajectories before they even execute. Her sheer presence and tactical synergy transform fractured rebel units into an unstoppable, cohesive force of devastation.",
+    "imagePath": "/assets/heroes/epic_support_mmo.png",
+    "lore": "Operating from the shadowed neon courts of Sector 88, The Aero-Link Vanguard acts as the tactical neural-anchor for elite strike operatives. Leveraging her height and flawless aerial kinetics, she dictates the flow of battle by predicting enemy trajectories before they even execute. Her sheer presence and tactical synergy transform fractured rebel units into an unstoppable, cohesive force of devastation.",
     "ability": {
       "name": "Kinetic Quick-Set Protocol",
-      "description": "Hou executes a flawless mid-air maneuver to intercept incoming enemy burst attacks, absorbing the kinetic force into her specialized impact-dampening gauntlets. She then 'Sets' this stored energy directly into the neural-links of her team, instantly resetting her squad's offensive cooldowns and granting a massive critical damage buff to their next synchronized strike."
+      "summary": "Absorbs incoming attacks mid-air, then 'Sets' the stored energy to reset squad cooldowns and buff critical damage.",
+      "description": "The Aero-Link Vanguard executes a flawless mid-air maneuver to intercept incoming enemy burst attacks, absorbing the kinetic force into her specialized impact-dampening gauntlets. She then 'Sets' this stored energy directly into the neural-links of her team, instantly resetting her squad's offensive cooldowns and granting a massive critical damage buff to their next synchronized strike."
     }
   },
   {
-    "Name": "Monique Burkland Matthews",
     "Sex": "NA",
     "Age": 36,
     "Height": "6'0\"",
@@ -380,17 +379,17 @@
     "SPEED": 48,
     "PRECISION": 83,
     "UTILITY": 93,
-    "ENDURANCE": 79.0,
+    "ENDURANCE": 79,
     "alias": "Chrome Sentinel",
-    "imagePath": "/assets/heroes/legendary_support_matthews.png",
-    "lore": "Reforged with military-grade cybernetics and a hyper-threaded neural link, Matthews stands as the ultimate legendary anchor for the underground resistance. Her augmented chassis is engineered to absorb massive kinetic trauma, while her tactical coprocessor instantly calculates flawless squad synergies on the fly. Where standard operatives break, she holds the line, distributing vital combat data and shielding to keep her squad operating at peak lethality.",
+    "imagePath": "/assets/heroes/legendary_support_mmo.png",
+    "lore": "Reforged with military-grade cybernetics and a hyper-threaded neural link, Chrome Sentinel stands as the ultimate legendary anchor for the underground resistance. Her augmented chassis is engineered to absorb massive kinetic trauma, while her tactical coprocessor instantly calculates flawless squad synergies on the fly. Where standard operatives break, she holds the line, distributing vital combat data and shielding to keep her squad operating at peak lethality.",
     "ability": {
       "name": "Neural-Sync Apex Set",
-      "description": "Matthews grounds her augmented chassis to intercept incoming enemy strikes, completely nullifying the damage and absorbing the kinetic energy. She then seamlessly 'sets' this stored power to a targeted ally, granting them a massive burst of temporary shielding, a 200% Critical Strike multiplier, and absolute crowd-control immunity for their next attack."
+      "summary": "Nullifies incoming damage and channels the energy to an ally, granting shielding, 200% Crit, and CC immunity.",
+      "description": "Chrome Sentinel grounds her augmented chassis to intercept incoming enemy strikes, completely nullifying the damage and absorbing the kinetic energy. She then seamlessly 'Sets' this stored power to a targeted ally, granting them a massive burst of temporary shielding, a 200% Critical Strike multiplier, and absolute crowd-control immunity for their next attack."
     }
   },
   {
-    "Name": "W. J. Ross",
     "Sex": "M",
     "Age": null,
     "Height": "NA",
@@ -406,17 +405,17 @@
     "SPEED": 44,
     "PRECISION": 79,
     "UTILITY": 89,
-    "ENDURANCE": 77.0,
+    "ENDURANCE": 77,
     "alias": "The Kinetic Weaver",
-    "imagePath": "/assets/heroes/rare_support_ross_1778160939271.png",
-    "lore": "Salvaged from the deep-archive 1904 servers, Ross's engram was decanted into a high-spec combat chassis to serve as a master tactician for the underground resistance. Wielding a hyper-tension carbon-mesh cradle, he manipulates battlefield momentum to turn disorganized street solos into a synchronized, lethal strike team. His silver-tier combat algorithms ensure the squad operates flawlessly under heavy corporate fire.",
+    "imagePath": "/assets/heroes/rare_support_mmo.png",
+    "lore": "Salvaged from the deep-archive 1904 servers, The Kinetic Weaver's engram was decanted into a high-spec combat chassis to serve as a master tactician for the underground resistance. Wielding a high-tension carbon-mesh cradle, he manipulates battlefield momentum to turn disorganized street solos into a synchronized strike team. His silver-tier combat algorithms ensure the squad operates flawlessly under heavy corporate fire.",
     "ability": {
       "name": "Quick-Stick Kinetic Transfer",
-      "description": "Ross utilizes his digitally-forged lacrosse shaft to execute a high-velocity precision pass, instantly transferring a surge of tactical energy to a targeted ally. This pivotal support action purges all neural crowd-control debuffs and grants a 'Fast Break' aura, hyper-buffing the squad's movement speed and critical strike synergy for a devastating, uncontested push."
+      "summary": "Executes a precision pass that purges ally debuffs and grants 'Fast Break', buffing squad speed and crit synergy.",
+      "description": "The Kinetic Weaver utilizes his digitally-forged high-tension carbon-mesh cradle to execute a high-velocity precision pass, instantly transferring a surge of tactical energy to a targeted ally. This pivotal support action purges all neural crowd-control debuffs and grants a 'Fast Break' aura, hyper-buffing the squad's movement speed and critical strike synergy for a devastating, uncontested push."
     }
   },
   {
-    "Name": "Adnan Nuri Yurdaer",
     "Sex": "M",
     "Age": 27,
     "Height": "NA",
@@ -432,17 +431,17 @@
     "SPEED": 42,
     "PRECISION": 42,
     "UTILITY": 42,
-    "ENDURANCE": 82.0,
+    "ENDURANCE": 82,
     "alias": "The Analog Vanguard",
-    "imagePath": "/assets/heroes/common_tank_yurdaer_1778204419963.png",
-    "lore": "Resurrected from the fragmented data-shards of the 1936 global skirmishes, Yurdaer is a legacy operative who relies on pure, unaugmented brute force. Operating as a frontline enforcer for the underground resistance, he shatters corporate riot lines with old-Earth combat algorithms burned directly into his muscle memory.",
+    "imagePath": "/assets/heroes/common_tank_mmo.png",
+    "lore": "Resurrected from the fragmented data-shards of the 1936 global skirmishes, The Analog Vanguard is a legacy operative who relies on pure brute force. Operating as a frontline enforcer for the underground resistance, he shatters corporate riot lines with old-Earth combat algorithms and 'Greco-Roman' body-locking techniques burned directly into his muscle memory.",
     "ability": {
       "name": "Kinetic Suplex Protocol",
-      "description": "Closes the distance to trap a high-threat target in an inescapable Greco-Roman bodylock, completely neutralizing their evasion systems and locking them into a control state. Yurdaer then executes a massive backward throw, dealing heavy physical burst damage, generating maximum threat aggro, and inflicting an immediate hard stun on the enemy unit to protect his squad."
+      "summary": "Locks a target in a Greco-Roman bodylock, then slams them for heavy burst damage with a hard stun.",
+      "description": "Closes the distance to trap a high-threat target in an inescapable Greco-Roman bodylock, completely neutralizing their evasion systems and locking them into a control state. The Analog Vanguard then executes a massive 'Suplex' throw, dealing heavy physical burst damage, generating maximum threat aggro, and inflicting an immediate hard stun on the enemy unit to protect his squad."
     }
   },
   {
-    "Name": "Urka olnir",
     "Sex": "F",
     "Age": 22,
     "Height": "173",
@@ -458,17 +457,17 @@
     "SPEED": 52,
     "PRECISION": 52,
     "UTILITY": 52,
-    "ENDURANCE": 92.0,
+    "ENDURANCE": 92,
     "alias": "The Gravity Weaver",
-    "imagePath": "/assets/heroes/epic_tank_zolnir.png",
-    "lore": "An elite frontline enforcer for the Grid's underground resistance, Urka weaponizes pure momentum to shatter corporate riot lines. Forged in the neon-lit dojos of Sector 4, she possesses an uncanny ability to read combat telemetry, turning an opponent's mass into their greatest vulnerability. Her epic-tier tactical mastery proves that flawless technique can easily dismantle heavy-ordnance security forces.",
+    "imagePath": "/assets/heroes/epic_tank_mmo.png",
+    "lore": "An elite frontline enforcer for the Grid's underground resistance, The Gravity Weaver weaponizes pure momentum to shatter corporate riot lines. Forged in the neon-lit dojos of Sector 4, she possesses an uncanny ability to read combat telemetry, turning an opponent's mass into their greatest vulnerability using advanced 'Uchi-Mata' throwing protocols.",
     "ability": {
       "name": "Zero-G Uchi-Mata",
-      "description": "Urka enters a fortified counter-stance, intercepting incoming melee strikes with frame-perfect timing. She instantly grapples the aggressor and executes a devastating inner-thigh throw, slamming them into the permacrete to trigger a massive AoE shockwave that shatters enemy shielding and generates maximum threat, forcing all nearby hostiles to focus their fire on her."
+      "summary": "Counter-throws an attacker with frame-perfect timing, triggering an AoE shockwave that shatters enemy shields.",
+      "description": "The Gravity Weaver enters a fortified counter-stance, intercepting incoming melee strikes with frame-perfect timing. She instantly grapples the aggressor and executes a devastating 'Uchi-Mata' inner-thigh throw, slamming them into the permacrete to trigger a massive AoE shockwave that shatters enemy shielding and generates maximum threat, forcing all nearby hostiles to focus their fire on her."
     }
   },
   {
-    "Name": "Kaarlo Johan Jalmari \"Kalle\" Anttila",
     "Sex": "M",
     "Age": 32,
     "Height": "167",
@@ -484,39 +483,40 @@
     "SPEED": 54,
     "PRECISION": 54,
     "UTILITY": 54,
-    "ENDURANCE": 94.0,
+    "ENDURANCE": 94,
     "alias": "The Tungsten Vice",
-    "imagePath": "/assets/heroes/legendary_tank_anttila_1778160557054.png",
-    "lore": "A legacy vanguard operative from the original 1920 Founders Initiative, 'Kalle' relies on hyper-dense biological muscle fibers and kinetic mastery rather than excess chrome. Standing at a compact 167cm, he acts as a localized gravity well on the battlefield, locking down heavily augmented cyber-psychos with pure, unadulterated grappling biomechanics. His veteran combat instincts make him an unbreakable anchor for any strike team operating in the neon-drenched underground.",
+    "imagePath": "/assets/heroes/legendary_tank_mmo.png",
+    "lore": "A legacy vanguard operative from the original 1920 Founders Initiative, 'The Tungsten Vice' relies on hyper-dense biological muscle fibers and kinetic mastery rather than excess chrome. He acts as a localized gravity well, locking down heavily augmented cyber-psychos with pure, unadulterated grappling biomechanics and 'Gut-Wrench' techniques from the early athletic archives.",
     "ability": {
       "name": "Kinetic Gut-Wrench Suplex",
-      "description": "Closing the distance at blinding speed, Anttila initiates a zero-tolerance grapple that bypasses active energy shields and evasion stats. He hoists the primary target into the air before slamming them into the ferrocrete, dealing massive blunt-force damage while generating an AoE shockwave that applies a 5-second neural stun to adjacent enemies and forces maximum aggro onto himself."
+      "summary": "Bypasses shields to grapple and slam the target, dealing massive damage with a 5-second AoE stun.",
+      "description": "Closing the distance at blinding speed, The Tungsten Vice initiates a zero-tolerance 'Gut-Wrench' grapple that bypasses active energy shields and evasion stats. He hoists the primary target into the air before slamming them into the ferrocrete, dealing massive blunt-force damage while generating an AoE shockwave that applies a 5-second neural stun to adjacent enemies and forces maximum aggro onto himself."
     }
   },
   {
-    "Name": "Livn Lpez Azcuy",
     "Sex": "M",
-    "Age": 34,
-    "Height": "170",
-    "Weight": "74",
-    "Sport": "Wrestling",
-    "Event": "Wrestling Men's Middleweight, Freestyle",
-    "Medal": "NA",
-    "Year": 2016,
-    "Origin": "Olympic",
+    "Age": 35,
+    "Height": "5'2\"",
+    "Weight": "NA",
+    "Sport": "Wheelchair Rugby",
+    "Event": "3.0",
+    "Medal": "Silver",
+    "Year": 2012,
+    "Origin": "Paralympic",
     "Rarity": "Rare",
     "Archetype": "Tank",
-    "STRENGTH": 95,
-    "SPEED": 50,
-    "PRECISION": 50,
-    "UTILITY": 50,
-    "ENDURANCE": 90.0,
-    "alias": "The Chrome Anvil",
-    "imagePath": "/assets/heroes/rare_tank_azcuy_1778160950876.png",
-    "lore": "Operative Azcuy is a veteran vanguard of the concrete jungle, trained to absorb blunt-force trauma that would flatline standard street mercs. Utilizing hyper-dense muscle conditioning and relentless middleweight agility, he anchors our defensive line against corporate strike teams. Once he closes the gap, his close-quarters supremacy turns the battlefield into an inescapable gravity well.",
+    "STRENGTH": 90,
+    "SPEED": 55,
+    "PRECISION": 55,
+    "UTILITY": 65,
+    "ENDURANCE": 98,
+    "alias": "The Collision Engine",
+    "imagePath": "/assets/heroes/rare_tank_mmo.png",
+    "lore": "Forged in the high-impact zones of the London and Rio sectors, The Collision Engine is a relentless frontline bruiser built to absorb and redirect massive kinetic force. Utilizing a reinforced tungsten-chassis, he initiates zero-tolerance lockdown protocols that turn the tide of urban skirmishes. He doesn't just hold the line—he is the line, an immovable force of grit and carbon-fiber.",
     "ability": {
-      "name": "Kinetic Double-Leg Takedown",
-      "description": "Closes the distance instantly to initiate an unbreakable grapple, pinning the primary target to the pavement and applying a 4-second hard stun. During the takedown, the operative generates a threat-generating kinetic shield that taunts all nearby hostiles, absorbing incoming damage before unleashing the stored energy as a concussive shockwave upon slamming the target."
+      "name": "Kinetic Deflection Pulse",
+      "summary": "Absorbs 50% of incoming damage and releases it as a 360-degree shockwave that stuns and taunts enemies.",
+      "description": "The Collision Engine grounds his reinforced chassis and enters a defensive overload state, absorbing 50% of all incoming physical and energy damage. Upon reaching critical capacity, he releases a massive 360-degree kinetic shockwave that deals damage based on energy absorbed, applies a 3-second hard stun, and forces all affected hostiles to focus their fire on him for the next 6 seconds."
     }
   }
 ]
