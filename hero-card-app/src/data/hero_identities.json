@@ -381,7 +381,7 @@
     "UTILITY": 93,
     "ENDURANCE": 79,
     "alias": "Chrome Sentinel",
-    "imagePath": "/assets/heroes/legendary_support_mmo.png",
+    "imagePath": "/assets/heroes/Chrome_Sentinel.png",
     "lore": "Reforged with military-grade cybernetics and a hyper-threaded neural link, Chrome Sentinel stands as the ultimate legendary anchor for the underground resistance. Her augmented chassis is engineered to absorb massive kinetic trauma, while her tactical coprocessor instantly calculates flawless squad synergies on the fly. Where standard operatives break, she holds the line, distributing vital combat data and shielding to keep her squad operating at peak lethality.",
     "ability": {
       "name": "Neural-Sync Apex Set",
@@ -512,7 +512,7 @@
     "ENDURANCE": 98,
     "alias": "The Collision Engine",
     "imagePath": "/assets/heroes/rare_tank_mmo.png",
-    "lore": "Forged in the high-impact zones of the London and Rio sectors, The Collision Engine is a relentless frontline bruiser built to absorb and redirect massive kinetic force. Utilizing a reinforced tungsten-chassis, he initiates zero-tolerance lockdown protocols that turn the tide of urban skirmishes. He doesn't just hold the line—he is the line, an immovable force of grit and carbon-fiber.",
+    "lore": "Forged in the high-impact zones of the London and Rio sectors, The Collision Engine is a relentless frontline bruiser built to absorb and redirect massive kinetic force. Utilizing a reinforced tungsten-chassis, he initiates zero-tolerance lockdown protocols that turn the tide of urban skirmishes. He doesn't just hold the line\u2014he is the line, an immovable force of grit and carbon-fiber.",
     "ability": {
       "name": "Kinetic Deflection Pulse",
       "summary": "Absorbs 50% of incoming damage and releases it as a 360-degree shockwave that stuns and taunts enemies.",

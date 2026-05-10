@@ -1,4 +1,4 @@
-# Digital Mirror: TCG Evolution Implementation Plan
+# Team USA: Hero Identity // TCG Evolution Implementation Plan
 
 ## 1. Core Concept
 Transitioning the "Digital Mirror" project into a Massively Multiplayer Online (MMO) inspired Trading Card Game (TCG). The aesthetic retains the high-contrast, industrial-punk, and vector-comic style, but the data architecture and card layouts are now driven by strict MMO archetypes and real-world medal rarities based on the Team USA dataset.
@@ -43,13 +43,13 @@ Rarity is determined dynamically based on the athlete's total gold medal count (
 *   **Athlete Illustration:** 2D flat-color illustration (vector-comic abstract). Industrial-punk gear (desaturated slate navy/olive drab palettes) with high-visibility piping matching the Archetype color. Paralympians feature functional cybernetic/medical devices (e.g., pneumatic limbs, sensory visors) integrating directly into the character structure. No text or logos on clothing.
 *   **Ability Description:** Lower third features a bold red tag for the ability name, followed by descriptive text detailing how the archetype uses the ability to affect the match.
 
-## 5. Current State & Accomplishments (April 2026 Checkpoint)
-*   **Image Generation Prompts Finalized:** Cleaned up `Character_Design_Build_Prompts.txt` by removing legacy formatting. Established two distinct structural prompts: Prompt #1 for Paralympians (includes Cybernetics guidelines) and Prompt #2 for Olympians (no Cybernetics).
-*   **BigQuery Dataset Validation:** Verified that the BigQuery SQL successfully parsed Paralympic medals and generated the new MMO `Archetype` and `Rarity` fields.
-*   **Base Set Generation (The 20-Card Set):** Extracted a sample set of 20 athletes (1 athlete per Archetype per Rarity) from BigQuery to serve as the initial Hackathon prototype release.
-*   **AI Heroic Data Enrichment:** Encountered 404 access errors when attempting to use Google Cloud Vertex AI SDK locally. Bypassed this by writing a custom python script (`enrich_athletes.py`) that successfully mapped the 20 raw athletes to heroic `alias`, `lore`, and `ability` fields.
-*   **Frontend Data Ready:** The enriched JSON payload for the 20-card Base Set is fully compiled and ready at `Data_Set/data_set_combined/hero_identities.json`.
-*   **React Frontend Status:** Verified that `HeroCard.tsx` still actively uses the `useBioSync` hook to compare user-entered biometric stats against the athlete's stats, turning green/red dynamically on the back of the card.
+## 5. Current State & Accomplishments (Final Prototype — May 2026)
+*   **Image Generation Prompts Finalized:** Cleaned up `Character_Design_Build_Prompts.txt`. Established distinct structural prompts for Paralympians (with Cybernetics) and Olympians.
+*   **BigQuery Dataset Validation:** Successfully parsed 120 years of data, generating the MMO `Archetype` and `Rarity` fields with absolute Paralympic parity.
+*   **Base Set Generation:** Finalized the 20-card prototype set (5 per rarity tier).
+*   **AI Heroic Data Enrichment:** Fully completed the `enrich_athletes.py` pipeline, generating high-fidelity `alias`, `lore`, and `ability` fields for the entire roster.
+*   **Frontend Deployment Ready:** The Next.js 16.2 application is finalized, featuring a 3D card-flip UI, biometric sync logic, and responsive 5x4 grid.
+*   **Portfolio Aligned:** Repository branding, README, and Devpost submission are perfectly synchronized under the "Team USA: Hero Identity" title.
 
 ## 6. Immediate Next Steps
 1.  **Frontend Implementation:** Refactor the React frontend `HeroCard.tsx` component to dynamically consume `hero_identities.json` instead of the legacy data, rendering the appropriate background gradients, SVG icons, and rarity-colored overlays.

@@ -29,7 +29,7 @@ interface HeroCardProps {
 
 const archetypeThemes = {
   'Tank': {
-    main: '#DC2626', // Crimson
+    main: '#991B1B', // Deep Crimson
     bg: 'from-red-950/80 to-black',
     icon: 'T'
   },
@@ -39,17 +39,17 @@ const archetypeThemes = {
     icon: 'D'
   },
   'DPS (DoT)': {
-    main: '#06B6D4', // Aqua Blue
+    main: '#0891B2', // Aqua Blue
     bg: 'from-cyan-950/80 to-black',
     icon: 'D'
   },
   'Support': {
-    main: '#10B981', // Jade Green
-    bg: 'from-green-950/80 to-black',
+    main: '#00A36C', // Jade Green
+    bg: 'from-emerald-950/80 to-black',
     icon: 'S'
   },
   'Controller': {
-    main: '#8B5CF6', // Neon Purple
+    main: '#A855F7', // Neon Purple
     bg: 'from-purple-950/80 to-black',
     icon: 'C'
   }

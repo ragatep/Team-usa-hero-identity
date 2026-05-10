@@ -9,11 +9,10 @@ This document tracks the "Elite" Legendary athlete cards to be built for the ini
 
 | Athlete Name | Archetype (Sport) | Alias | Main Bg Color | Icon | Ability Tag | Descriptive Text | Ht | Wt | Age Val | Built? |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Bruce Baumgartner** | The Tank (Wrestling) | The Mountain | Crimson | Shield | SUPLEX | If The Tank executes a perfect SUPLEX, the opponent is stunned and loses their next turn. | 188 | 130 | 23 | [x] |
-| **George Eyser** | The DPS (Gymnastics) | The Iron Gymnast | Electric Blue | Swords | VAULTING LEAP | If The DPS executes a perfect VAULTING LEAP, the opponent is knocked back and loses armor. | 172 | 70 | 33 | [x] |
-| **Mark Spitz** | The DPS-DoT (Swimming) | The Shark | Aqua Blue | Lightning | TIDAL WAVE | If The DPS uses TIDAL WAVE, the opponent takes sustained damage over the next 3 turns. | 183 | 73 | 22 | [x] |
-| **Bob Kurland** | The Support (Basketball) | The Giant | Jade Green | Plus | COURT VISION | If The Support uses COURT VISION, all teammates gain +20 Precision for the remainder of the turn. | 213 | 100 | 23 | [x] |
-| **Phil Bryant** | The Controller (Archery) | The Marksman | Neon Purple | Target | PINPOINT STRIKE | If The Controller uses PINPOINT STRIKE, they bypass the opponent shield and deal direct damage. | 180 | 75 | 26 | [x] |
-| **Dartanyon Crockett** | The Tank (Para Judo) | The Sensei | Crimson | Shield | SEOI NAGE | If The Tank executes a perfect SEOI NAGE, the opponent is thrown and stunned for one turn. | 170 | 90 | 34 | [x] |
+| Anonymous | Controller (Equestrianism) | **The Chrome Cavalier** | Neon Purple | Target | Cross-Country Overwrite | Commands his mount to... | NA | NA | 35 | [x] |
+| Anonymous | DPS (Speed Skating) | **The Cryo-Velocity Phantom** | Electric Blue | Swords | Kinetic Crossover Strike | Dashes at burst-speed... | 170 | 70 | 31 | [x] |
+| Anonymous | DPS (DoT) (Athletics) | **The Silver Pentarch** | Aqua Blue | Lightning | Kinetic Pentathlon Cascade | Dashes through enemies... | 174 | 69 | 25 | [x] |
+| Anonymous | Support (Sitting Volleyball) | **Chrome Sentinel** | Jade Green | Plus | Neural-Sync Apex Set | Nullifies incoming damage... | 6'0" | NA | 36 | [x] |
+| Anonymous | Tank (Wrestling) | **The Tungsten Vice** | Crimson | Shield | Kinetic Gut-Wrench Suplex | Bypasses shields to... | 167 | 64 | 32 | [x] |
 
 *Note: Dartanyon Crockett represents our visually-impaired Legendary build. Paralympic dataset medals require patching to correctly pull Legendary stats automatically in the future.*

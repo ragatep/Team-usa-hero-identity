@@ -1,4 +1,4 @@
-# Hackathon Judging Criteria Assessment Report: Team USA Digital Mirror
+# Hackathon Judging Criteria Assessment Report: Team USA Hero Identity
 
 **Date:** May 2, 2026
 **Project:** Team USA Digital Mirror (TCG Evolution)

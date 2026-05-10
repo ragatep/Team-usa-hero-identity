@@ -1,4 +1,4 @@
-# Implementation Plan: Restoring Live Gemini AI Endpoints
+# Team USA: Hero Identity // Gemini AI Implementation Plan
 
 This document details the technical strategy to resolve the `404 NOT_FOUND` authentication and routing errors, moving the project from "mock/bypass" generation back to a live AI production pipeline using Gemini.
 
@@ -54,7 +54,5 @@ def generate_hero_profile(athlete_data):
 *   **Failover Logic:** Implement a fallback to `gemini-1.5-flash` if the reasoning model hits rate limits or regional 404s.
 *   **JSON Enforcement:** Since reasoning models can be verbose, we will utilize Gemini's **Controlled Output (JSON Mode)** to ensure the React frontend receives valid `HeroProfile` objects.
 
-## 3. Success Criteria
-*   The `generate_hero_profiles.py` script successfully generates a profile without `404 NOT_FOUND`.
-*   The generated lore includes "Augmented" descriptors for Paralympians.
-*   The `hero_identities.json` file is populated with live AI-generated text, not mock data.
+## 4. Implementation Status (Successful)
+The transition to live API Key authentication and the integration of Gemini 3.1 Pro reasoning models was successfully completed in May 2026. The `404 NOT_FOUND` errors were resolved by switching from OAuth ADC to API Key auth and correctly configuring the `thinking_config`. The entire 20-card set now features live AI-generated lore and ability descriptions.
