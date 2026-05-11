@@ -57,24 +57,24 @@ const archetypeThemes = {
 
 const rarityThemes = {
   'Legendary': {
-    color: '#FCD34D', // Pastel Gold
-    glow: 'shadow-[0_0_15px_#FCD34D88]',
-    border: 'border-yellow-200'
+    color: '#FFD700', // Neon Gold
+    glow: 'shadow-[0_0_25px_#FFD700AA]',
+    border: 'border-yellow-400'
   },
   'Epic': {
-    color: '#C084FC', // Pastel Purple
-    glow: 'shadow-[0_0_15px_#C084FC88]',
-    border: 'border-purple-300'
+    color: '#D8B4FE', // Vibrant Purple
+    glow: 'shadow-[0_0_25px_#D8B4FEAA]',
+    border: 'border-purple-400'
   },
   'Rare': {
-    color: '#93C5FD', // Pastel Blue
-    glow: 'shadow-[0_0_15px_#93C5FD88]',
-    border: 'border-blue-300'
+    color: '#60A5FA', // Vibrant Blue
+    glow: 'shadow-[0_0_25px_#60A5FAAA]',
+    border: 'border-blue-400'
   },
   'Common': {
-    color: '#86EFAC', // Pastel Green
-    glow: 'shadow-[0_0_15px_#86EFAC88]',
-    border: 'border-green-300'
+    color: '#4ADE80', // Vibrant Green
+    glow: 'shadow-[0_0_25px_#4ADE80AA]',
+    border: 'border-green-400'
   }
 };
 
@@ -85,88 +85,87 @@ const parseMetric = (val: string | number) => {
 };
 
 // --- Extracted Card Faces Component ---
-// This allows us to render the exact same card in the grid AND in the modal.
 const CardFaces = ({ hero, archTheme, rarityTheme, displayHeight, displayWeight, diffHeight, diffWeight, heightUnit, weightUnit, diffHeightUnit, diffWeightUnit, userBio, imageSrc, isExpanded, syncScore }: any) => (
   <>
     {/* FRONT: TCG-STYLE CARD */}
     <div 
       className="absolute inset-0 backface-hidden rounded-lg overflow-hidden transition-all duration-500 animate-neon-flicker"
       style={{ 
-        background: `linear-gradient(135deg, ${rarityTheme.color}, ${rarityTheme.color}88, ${rarityTheme.color}44, ${rarityTheme.color}88, ${rarityTheme.color})`,
+        background: `linear-gradient(135deg, ${rarityTheme.color}, ${rarityTheme.color}AA, ${rarityTheme.color}66, ${rarityTheme.color}AA, ${rarityTheme.color})`,
         padding: '6px',
-        boxShadow: `0 0 30px ${rarityTheme.color}66, 0 0 60px ${rarityTheme.color}22`
+        boxShadow: `0 0 40px ${rarityTheme.color}44, 0 0 80px ${rarityTheme.color}11`
       }}
     >
       {/* Circuit-board texture overlay on the frame */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none z-[1]"
+      <div className="absolute inset-0 opacity-30 pointer-events-none z-[1]"
         style={{
           backgroundImage: `
-            linear-gradient(90deg, transparent 48%, ${rarityTheme.color}44 49%, ${rarityTheme.color}44 51%, transparent 52%),
-            linear-gradient(0deg, transparent 48%, ${rarityTheme.color}44 49%, ${rarityTheme.color}44 51%, transparent 52%)
+            linear-gradient(90deg, transparent 48%, ${rarityTheme.color}22 49%, ${rarityTheme.color}22 51%, transparent 52%),
+            linear-gradient(0deg, transparent 48%, ${rarityTheme.color}22 49%, ${rarityTheme.color}22 51%, transparent 52%)
           `,
-          backgroundSize: '20px 20px'
+          backgroundSize: '24px 24px'
         }}
       />
 
       {/* Corner accent clips */}
-      <div className="absolute top-0 left-0 w-5 h-5 z-[2]" style={{ borderTop: `3px solid ${rarityTheme.color}`, borderLeft: `3px solid ${rarityTheme.color}` }} />
-      <div className="absolute top-0 right-0 w-5 h-5 z-[2]" style={{ borderTop: `3px solid ${rarityTheme.color}`, borderRight: `3px solid ${rarityTheme.color}` }} />
-      <div className="absolute bottom-0 left-0 w-5 h-5 z-[2]" style={{ borderBottom: `3px solid ${rarityTheme.color}`, borderLeft: `3px solid ${rarityTheme.color}` }} />
-      <div className="absolute bottom-0 right-0 w-5 h-5 z-[2]" style={{ borderBottom: `3px solid ${rarityTheme.color}`, borderRight: `3px solid ${rarityTheme.color}` }} />
+      <div className="absolute top-0 left-0 w-6 h-6 z-[2]" style={{ borderTop: `4px solid ${rarityTheme.color}`, borderLeft: `4px solid ${rarityTheme.color}` }} />
+      <div className="absolute top-0 right-0 w-6 h-6 z-[2]" style={{ borderTop: `4px solid ${rarityTheme.color}`, borderRight: `4px solid ${rarityTheme.color}` }} />
+      <div className="absolute bottom-0 left-0 w-6 h-6 z-[2]" style={{ borderBottom: `4px solid ${rarityTheme.color}`, borderLeft: `4px solid ${rarityTheme.color}` }} />
+      <div className="absolute bottom-0 right-0 w-6 h-6 z-[2]" style={{ borderBottom: `4px solid ${rarityTheme.color}`, borderRight: `4px solid ${rarityTheme.color}` }} />
 
       {/* Inner card body */}
-      <div className="relative w-full h-full rounded-md overflow-hidden bg-[#0a0a0a] flex flex-col z-[3]">
+      <div className="relative w-full h-full rounded-md overflow-hidden bg-[#050505] flex flex-col z-[3]">
         
         {/* === TOP BAR: Name + Alias + Hex Icon (Right) === */}
-        <div className="relative z-20 px-3 pt-3 pb-2 flex items-start gap-2" style={{ backgroundColor: '#0a0a0a' }}>
+        <div className="relative z-20 px-4 pt-4 pb-3 flex items-start gap-2" style={{ backgroundColor: '#050505' }}>
             {/* Name block — takes full width */}
             <div className="flex-1 min-w-0 pt-0.5">
               <h2 
-                className="text-[17px] text-white uppercase leading-tight break-words glitch-hover"
+                className="text-[19px] text-white uppercase leading-tight break-words glitch-hover tracking-tight"
                 style={{ 
                   fontFamily: "'Oxanium', sans-serif",
-                  fontWeight: 800,
-                  textShadow: `0 0 10px ${rarityTheme.color}44`
+                  fontWeight: 900,
+                  textShadow: `0 0 15px ${rarityTheme.color}88, 2px 2px 0px rgba(0,0,0,0.8)`
                 }}
               >
                 {hero.alias}
               </h2>
               
               {/* SYNC STATUS BAR (Layer 3) */}
-              <div className="flex items-center gap-2 mt-1 opacity-80">
-                <div className="flex-1 h-[3px] bg-white/10 rounded-full overflow-hidden flex">
+              <div className="flex items-center gap-2 mt-1.5 opacity-90">
+                <div className="flex-1 h-[4px] bg-white/5 rounded-full overflow-hidden flex border border-white/5">
                   <div 
-                    className="h-full transition-all duration-1000"
+                    className="h-full transition-all duration-1000 shadow-[0_0_10px_currentcolor]"
                     style={{ 
                       width: userBio.isSynced ? `${syncScore}%` : '0%',
-                      backgroundColor: userBio.isSynced ? rarityTheme.color : '#333',
-                      boxShadow: userBio.isSynced ? `0 0 10px ${rarityTheme.color}` : 'none'
+                      backgroundColor: userBio.isSynced ? rarityTheme.color : '#222',
+                      boxShadow: userBio.isSynced ? `0 0 15px ${rarityTheme.color}` : 'none'
                     }}
                   />
                 </div>
-                <span className="text-[9px] font-mono font-bold tracking-tighter" style={{ color: userBio.isSynced ? rarityTheme.color : '#444' }}>
+                <span className="text-[10px] font-mono font-black tracking-tighter" style={{ color: userBio.isSynced ? rarityTheme.color : '#333' }}>
                   {userBio.isSynced ? `SYNC_${syncScore}%` : 'SYNC_AWAITING'}
                 </span>
               </div>
             </div>
 
           {/* Hexagonal Archetype Icon — Right */}
-          <div className="flex-shrink-0 relative w-10 h-12 flex items-center justify-center">
+          <div className="flex-shrink-0 relative w-11 h-13 flex items-center justify-center">
             <div 
-              className="w-9 h-10 flex items-center justify-center"
+              className="w-10 h-11 flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)]"
               style={{ 
                 clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
                 backgroundColor: rarityTheme.color
               }}
             >
               <div 
-                className="w-[32px] h-[36px] flex items-center justify-center"
+                className="w-[34px] h-[38px] flex items-center justify-center"
                 style={{ 
                   clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-                  backgroundColor: '#0a0a0a'
+                  backgroundColor: '#050505'
                 }}
               >
-                <span className="text-lg font-black font-[Orbitron]" style={{ color: rarityTheme.color }}>
+                <span className="text-xl font-black font-[Orbitron]" style={{ color: rarityTheme.color }}>
                   {archTheme.icon}
                 </span>
               </div>
@@ -175,41 +174,41 @@ const CardFaces = ({ hero, archTheme, rarityTheme, displayHeight, displayWeight,
         </div>
 
         {/* === PORTRAIT ART BOX === */}
-        <div className="relative flex-1 mx-2 mb-0 rounded-sm overflow-hidden border border-white/10 cyber-scanline">
-          {/* Archetype gradient — CONTAINED inside the art box */}
+        <div className="relative flex-1 mx-2 mb-0 rounded-sm overflow-hidden border border-white/5 cyber-scanline shadow-inner">
+          {/* Subtle Archetype ambient glow (Reduced significantly as backgrounds are now baked-in) */}
           <div 
-            className="absolute inset-0 z-0"
+            className="absolute inset-0 z-0 opacity-30"
             style={{ 
-              background: `linear-gradient(to bottom, ${archTheme.main}55 0%, ${archTheme.main}22 30%, transparent 60%, #000 100%)`
+              background: `radial-gradient(circle at 50% 20%, ${archTheme.main}44 0%, transparent 70%)`
             }}
           />
 
           {/* Character portrait */}
           <div className="relative w-full h-full z-10 flex items-center justify-center">
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-full group-hover:scale-110 transition-transform duration-700">
               <Image 
                 src={imageSrc} 
                 alt={hero.alias}
                 fill
-                className="object-contain object-center drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
+                className="object-contain object-center drop-shadow-[0_10px_30px_rgba(0,0,0,0.9)]"
                 priority
                 unoptimized
               />
             </div>
           </div>
 
-          {/* Rarity + Archetype Sport badges overlaid on portrait with scrim */}
+          {/* Rarity + Archetype Sport badges overlaid on portrait with premium scrim */}
           <div className="absolute bottom-0 left-0 right-0 z-20">
-            <div className="px-2 pb-2 pt-6" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%)' }}>
-              <div className="flex gap-1.5">
+            <div className="px-3 pb-3 pt-8" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%)' }}>
+              <div className="flex gap-2">
                 <span 
-                  className="px-2 py-0.5 text-[9px] font-black uppercase tracking-wider border border-black/10 shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
-                  style={{ backgroundColor: rarityTheme.color, color: '#0a0a0a' }}
+                  className="px-2.5 py-1 text-[10px] font-black uppercase tracking-widest border border-black/20 shadow-[0_4px_15px_rgba(0,0,0,0.6)]"
+                  style={{ backgroundColor: rarityTheme.color, color: '#000' }}
                 >
                   {hero.Rarity}
                 </span>
                 <span 
-                  className="px-2 py-0.5 text-[9px] font-black uppercase tracking-wider border border-white/20 shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+                  className="px-2.5 py-1 text-[10px] font-black uppercase tracking-widest border border-white/10 shadow-[0_4px_15px_rgba(0,0,0,0.6)]"
                   style={{ backgroundColor: archTheme.main, color: '#fff' }}
                 >
                   {hero.Archetype} {hero.Sport}

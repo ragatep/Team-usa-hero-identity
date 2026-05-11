@@ -1,9 +1,9 @@
 import csv
 import re
 
-input_raw = r'E:\joffet\Documents\GitHubRepo\Team-usa-hero-identity\Data_Set\paralympics\team_usa_paralympians.csv'
-input_clean = r'E:\joffet\Documents\GitHubRepo\Team-usa-hero-identity\Data_Set\paralympics\team_usa_paralympians_clean.csv'
-output_clean = r'E:\joffet\Documents\GitHubRepo\Team-usa-hero-identity\Data_Set\paralympics\team_usa_paralympians_clean_patched.csv'
+input_raw = r'./team_usa_paralympians.csv'
+input_clean = r'./team_usa_paralympians_clean.csv'
+output_clean = r'./team_usa_paralympians_clean_patched.csv'
 
 def extract_medals(bio):
     match = re.search(r'Paralympic medalist \((.*?)\)', str(bio), re.IGNORECASE)

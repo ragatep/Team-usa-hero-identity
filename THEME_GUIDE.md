@@ -20,10 +20,10 @@ Every hero card is assigned a rarity tier based on the physical excellence and h
 
 | Tier | Color | Hex Code | Criteria | Glow Effect |
 |------|-------|----------|----------|-------------|
-| **Legendary** | Pastel Gold | `#FCD34D` | Multiple Gold Medals or exceptional career significance | Warm golden neon border with `shadow-[0_0_15px_#FCD34D88]` |
-| **Epic** | Pastel Purple | `#C084FC` | Single Gold Medal | Vibrant purple neon border with `shadow-[0_0_15px_#C084FC88]` |
-| **Rare** | Pastel Blue | `#93C5FD` | Silver or Bronze Medal(s) | Cool blue neon border with `shadow-[0_0_15px_#93C5FD88]` |
-| **Common** | Pastel Green | `#86EFAC` | Participant / No Medal | Subtle green neon border with `shadow-[0_0_15px_#86EFAC88]` |
+| **Legendary** | Neon Gold | `#FFD700` | Multiple Gold Medals or exceptional career significance | Vibrant golden neon border with `shadow-[0_0_25px_#FFD700AA]` |
+| **Epic** | Vibrant Purple | `#D8B4FE` | Single Gold Medal | Intense purple neon border with `shadow-[0_0_25px_#D8B4FEAA]` |
+| **Rare** | Vibrant Blue | `#60A5FA` | Silver or Bronze Medal(s) | Deep blue neon border with `shadow-[0_0_25px_#60A5FAAA]` |
+| **Common** | Vibrant Green | `#4ADE80` | Participant / No Medal | Sharp green neon border with `shadow-[0_0_25px_#4ADE80AA]` |
 
 ### Design Philosophy
 
@@ -175,8 +175,8 @@ Every portrait was generated using Google's Imagen API with the following enforc
 | **Facial Expression** | Neutral, calm, stoic | Avoids aggressive grimacing; fits tactical TCG tone |
 | **Anonymity** | Vector-comic abstraction | No real-world identities or likenesses |
 | **Text/Logos** | Absolutely none | Clean compositing into the React card frame |
-| **Background** | Clean Gradient | Provided by the TCG design system |
-| **Style** | 2D flat-color vector-comic, industrial-punk | Consistent across all 20 portraits |
+| **Background** | Clean Vertical Gradient | Light at the top, fading to absolute black at the bottom |
+| **Style** | 2D flat-color vector-comic | Industrial-punk aesthetic with neon piping |
 | **Gear** | Sport-specific, futuristic | Cybernetic enhancements integrated into sport equipment |
 
 ---
@@ -203,10 +203,10 @@ Located in the Ability Row, this badge surfaces the "Veteran Factor" derived fro
 
 ### Rarity Colors
 ```
-Legendary:  #FCD34D  (Pastel Gold)
-Epic:       #C084FC  (Pastel Purple)
-Rare:       #93C5FD  (Pastel Blue)
-Common:     #86EFAC  (Pastel Green)
+Legendary:  #FFD700  (Neon Gold)
+Epic:       #D8B4FE  (Vibrant Purple)
+Rare:       #60A5FA  (Vibrant Blue)
+Common:     #4ADE80  (Vibrant Green)
 ```
 
 ### Archetype Colors
@@ -228,4 +228,4 @@ Accent:      cyan-500 (selection highlight, footer dots)
 
 ---
 
-*Verified by Vertex AI // Gemini 3.1 Pro — Hackathon 2026 // Project: Hero Identity — System Status: Optimal ■*
+*Verified by Vertex AI // Gemini 2.0 Flash — Hackathon 2026 // Project: Hero Identity — System Status: Optimal ■*

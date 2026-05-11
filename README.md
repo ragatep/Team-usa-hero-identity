@@ -32,11 +32,11 @@ Digital Mirror bridges the gap between **international athletics** and **gaming 
 Every card in the system represents the physical "DNA" of an Olympic or Paralympic discipline. Utilizing anonymous biographical data — height, weight, age, sport, medal count — the system generates:
 
 - **Olympic & Paralympic Parity**: A balanced roster of 16 Olympic and 4 Paralympic hero-archetypes across all rarity tiers.
-- **Veteran Factor (New)**: A multi-game longevity algorithm that boosts stats based on real-world competitive history (Rewards multi-cycle athletes with +Utility and +Endurance).
+- **Veteran Factor**: A multi-game longevity algorithm that boosts stats based on real-world competitive history (Rewards multi-cycle athletes with +Utility and +Endurance).
 - **Rarity Tiers** based on historical achievement (Legendary, Epic, Rare, Common).
 - **MMO Archetypes** mapped from their sport discipline (Tank, DPS, Support, Controller).
 - **Character Lore** and **Combat Abilities** synthesized by Vertex AI.
-- **AI-Generated Portraits** using **Vertex AI Imagen 3** with a refined industrial-punk prompt pipeline.
+- **AI-Generated Portraits** using **Vertex AI Imagen 4.0 Pro/Ultra** with a refined industrial-punk prompt pipeline and strict vertical gradients.
 
 The user can then **sync their own biometrics** (height, weight, age) to activate the **Digital Mirror Neural Sync**, which calculates a real-time **Sync Score (%)** based on their alignment with the hero's physical stats.
 
@@ -47,8 +47,8 @@ The user can then **sync their own biometrics** (height, weight, age) to activat
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
 | **Data Pipeline** | Google BigQuery | Anonymous Olympic/Paralympic athlete metadata |
-| **AI Generation** | Vertex AI (Gemini 3.1 Pro) | Character lore, ability descriptions, archetype mapping |
-| **Art Generation** | Vertex AI (Imagen 3) | 20 high-fidelity vector-comic character portraits |
+| **AI Generation** | Vertex AI (Gemini 2.0 Flash) | Character lore, ability descriptions, archetype mapping |
+| **Art Generation** | Vertex AI (Imagen 4.0 Pro/Ultra) | 20 high-fidelity vector-comic character portraits |
 | **Frontend** | Next.js 16.2 + React 19.2 | Interactive 3D card-flip UI with expanded modal views |
 | **Styling** | Tailwind CSS 4.0 | Responsive 5×4 grid layout with dynamic neon glow effects |
 | **State Management** | React Context API | Global biometric sync with Metric/Imperial unit toggle |
@@ -93,7 +93,7 @@ The Veteran Factor is a data-driven stat modifier derived from the athlete's rea
 Each sport was mapped to a traditional MMO role based on physical demands. For example, Wrestlers and Judoka map to **Tank** (frontline defense), while Sprinters and Skiers map to **DPS** (burst damage).
 
 ### How were the portraits generated?
-All 20 character portraits were generated using **Vertex AI Imagen 3**. Each prompt enforced strict constraints: a single solitary anonymous athlete, stoic facial expression, and an industrial-punk aesthetic.
+All 20 character portraits were generated using **Vertex AI Imagen 4.0 Pro/Ultra**. Each prompt enforced strict constraints: a single solitary anonymous athlete, stoic facial expression, an industrial-punk aesthetic, and a smooth vertical "Light-to-Dark" background gradient to ensure visual consistency across the entire roster.
 
 ---
 
@@ -109,7 +109,7 @@ All 20 character portraits were generated using **Vertex AI Imagen 3**. Each pro
 ## Credits
 
 - **Data Source**: Anonymous Olympic & Paralympic historical records via Google BigQuery
-- **AI Models**: Vertex AI (Gemini 3.1 Pro & Imagen 3)
+- **AI Models**: Vertex AI (Gemini 2.0 Flash & Imagen 4.0 Pro/Ultra)
 - **Framework**: Next.js 16.2 with React 19.2
 - **Project**: Google Cloud Hackathon 2026 — Project: Hero Identity
 - **System Status**: Optimal ■

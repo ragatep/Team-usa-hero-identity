@@ -12,13 +12,13 @@ Which Team USA sport fits your build? Hero Identity uses Google AI and 120 years
 Digital Mirror is an interactive trading card experience that:
 - **Archetypes Athletes**: Categorizes disciplines into 5 core MMO roles (Tank, Burst DPS, DoT DPS, Support, Controller).
 - **Generates Lore**: Uses Gemini to synthesize tactical character backgrounds based on real-world athletic data.
-- **Visualizes Heroes**: Features 20 high-fidelity "industrial-punk" portraits generated via Imagen 3.
+- **Visualizes Heroes**: Features 20 high-fidelity "industrial-punk" portraits generated via Imagen 4.0 Pro/Ultra.
 - **Biometric Sync**: Allows users to input their own stats to see how they "stack up" against the greats using real-time delta math.
 
 ## How I built it
 - **BigQuery**: For processing 120 years of anonymized Olympic/Paralympic data.
-- **Vertex AI (Gemini 3.1 Pro)**: For the "Lore Engine" and Archetype Mapping.
-- **Vertex AI (Imagen 3)**: For the high-fidelity vector-comic art pipeline.
+- **Vertex AI (Gemini 2.0 Flash)**: For the "Lore Engine" and Archetype Mapping.
+- **Vertex AI (Imagen 4.0 Pro/Ultra)**: For the high-fidelity vector-comic art pipeline.
 - **Next.js & React**: For a responsive, 3D card-flip user interface.
 
 ## Challenges I ran into
@@ -38,8 +38,8 @@ I envision expanding the roster to include more niche disciplines and integratin
 ## Built With
 - BigQuery
 - Google Cloud
-- Imagen 3
-- Gemini 3.1 Pro
+- Imagen 4.0 Pro/Ultra
+- Gemini 2.0 Flash
 - Next.js
 - Tailwind CSS
 - TypeScript

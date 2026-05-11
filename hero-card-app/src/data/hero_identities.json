@@ -17,7 +17,7 @@
     "UTILITY": 92,
     "ENDURANCE": 65,
     "alias": "The Signal Phantom",
-    "imagePath": "/assets/heroes/common_controller_signal_phantom_v15_1778501232586.png",
+    "imagePath": "/assets/heroes/common_controller_the_signal_phantom_final.png",
     "lore": "The Signal Phantom is a high-velocity tactical operative who weaponizes track-grade speed to dominate the grid's sensory layers. Utilizing state-of-the-art cybernetic blades, he zips through enemy sectors at blinding speeds, deploying a wake of neural-interference that masks his squad's presence. He is a ghost in the machine, proving that the fastest way to control a battlefield is to be everywhere at once before the enemy's optics can even lock on.",
     "ability": {
       "name": "Slipstream Scramble",
@@ -43,7 +43,7 @@
     "UTILITY": 80,
     "ENDURANCE": 50,
     "alias": "Zero-Drift Sentinel",
-    "imagePath": "/assets/heroes/epic_controller_zero_drift_v15_1778501257581.png",
+    "imagePath": "/assets/heroes/epic_controller_zero-drift_sentinel_final.png",
     "lore": "Dug out from the encrypted 1932 Archives, Zero-Drift Sentinel is an elite marksman from the pioneer era of ballistic cyber-warfare. Utilizing archaic but flawlessly tuned optical wetware, he commands the battlefield from the shadows, dictating enemy movement with chilling precision. He operates as the ultimate overwatch for the resistance, turning chaotic skirmishes into calculated executions.",
     "ability": {
       "name": "Prone Axis Lock",
@@ -71,7 +71,7 @@
     "UTILITY": 81,
     "ENDURANCE": 51,
     "alias": "The Chrome Cavalier",
-    "imagePath": "/assets/heroes/legendary_controller_chrome_cavalier_v15_1778501278559.png",
+    "imagePath": "/assets/heroes/legendary_controller_the_chrome_cavalier_final.png",
     "lore": "A Legendary engram recovered from the '52 Golden Era archives, The Chrome Cavalier dominates the grid as a high-society tactician neurally bonded to a custom-tuned synthetic thoroughbred. With aristocratic lethality and flawless tactical synchronization, he manipulates battlefield geometry, transforming chaotic neon warzones into his own meticulously controlled arena.",
     "ability": {
       "name": "Cross-Country Overwrite",
@@ -99,7 +99,7 @@
     "UTILITY": 84,
     "ENDURANCE": 54,
     "alias": "The Apex Cavalier",
-    "imagePath": "/assets/heroes/rare_controller_apex_cavalier_v15_1778501298131.png",
+    "imagePath": "/assets/heroes/rare_controller_the_apex_cavalier_final.png",
     "lore": "A master of mechanized beast-taming from the early terrestrial jump-programs, The Apex Cavalier rides an elite cyber-steed into the neon-drenched fray. As a veteran tactician of the Resistance, he commands the high ground, dictating the flow of battle with flawless, calculated maneuvers.",
     "ability": {
       "name": "Oxer Overdrive Protocol",
@@ -127,7 +127,7 @@
     "UTILITY": 86,
     "ENDURANCE": 51,
     "alias": "The Glacial Phantom",
-    "imagePath": "/assets/heroes/common_dps_mmo.png",
+    "imagePath": "/assets/heroes/common_dps_the_glacial_phantom_final.png",
     "lore": "Operating in the urban tundra, The Glacial Phantom is a pursuit specialist who outruns corporate kill-squads across grueling thirty-kilometer stretches. Utilizing bleeding-edge thermal-regulation gear, he maintains lethal burst-speed in environments where standard mechanization freezes solid. He is a ghost in the snow, striking fast and vanishing before biometric monitors can flatline.",
     "ability": {
       "name": "Double-Pole Kinetic Strike",
@@ -155,7 +155,7 @@
     "UTILITY": 75,
     "ENDURANCE": 95,
     "alias": "Multi-Spectral Stryder",
-    "imagePath": "/assets/heroes/epic_dps_mmo.png",
+    "imagePath": "/assets/heroes/epic_dps_multi-spectral_stryder_final.png",
     "lore": "A multi-phase operative decanted from the elite Winter and Summer programs, Multi-Spectral Stryder is a relentless damage-dealer across all terrains. Whether navigating the urban tundra or the neon highways, her overclocked kinetic drives deliver a continuous barrage of high-velocity strikes. She is the living embodiment of multi-core combat synchronization, outlasting enemies through sheer efficiency and unbreakable momentum.",
     "ability": {
       "name": "Omni-Gait Overdrive",
@@ -181,7 +181,7 @@
     "UTILITY": 104,
     "ENDURANCE": 69,
     "alias": "The Cryo-Velocity Phantom",
-    "imagePath": "/assets/heroes/legendary_dps_mmo.png",
+    "imagePath": "/assets/heroes/legendary_dps_the_cryo-velocity_phantom_final.png",
     "lore": "Operating out of the hyper-cooled Northern Spire, The Cryo-Velocity Phantom is a legendary strike operative who leaves only a slipstream of frozen neon in her wake. Her mastery of frictionless kinetic acceleration allows her to shatter elite corporate hit-squads before their optics can even register a threat. To the syndicate bosses who fear her, she is the sudden chill down their spine right before the total blackout.",
     "ability": {
       "name": "Kinetic Crossover Strike",
@@ -209,7 +209,7 @@
     "UTILITY": 92,
     "ENDURANCE": 57,
     "alias": "The Neon Sweeper",
-    "imagePath": "/assets/heroes/rare_dps_mmo.png",
+    "imagePath": "/assets/heroes/rare_dps_the_neon_sweeper_final.png",
     "lore": "Forged in the grid-fires of the 2012 sector conflicts, The Neon Sweeper is a high-velocity shock operative who turns the battlefield into her own personal strike zone. Wielding a carbon-weave kinetic driver, her relentless frontline assaults shattered elite defense formations to secure a Bronze-tier combat rating. She now operates as a prime damage dealer, exploiting micro-seconds of tactical vulnerability with lethal precision.",
     "ability": {
       "name": "Overcharged Tomahawk Strike",
@@ -237,7 +237,7 @@
     "UTILITY": 50,
     "ENDURANCE": 95,
     "alias": "The Trench Runner",
-    "imagePath": "/assets/heroes/common_dot_trench_runner_v15_1778501318452.png",
+    "imagePath": "/assets/heroes/common_dps_(dot)_the_trench_runner_final.png",
     "lore": "A rapid-assault operative engineered for the grueling urban marathons of the neon sprawl. The Trench Runner relies on bio-woven endurance fibers to outlast corporate pursuit, navigating barricades and flooded hazard zones with frictionless momentum. He exhausts pursuers in prolonged chases, bleeding out their stamina until they collapse in his slipstream.",
     "ability": {
       "name": "Hydro-Vault Slipstream",
@@ -265,7 +265,7 @@
     "UTILITY": 56,
     "ENDURANCE": 101,
     "alias": "The Omni-Phase Vanguard",
-    "imagePath": "/assets/heroes/epic_dot_omni_phase_vanguard_v15_1778501337276.png",
+    "imagePath": "/assets/heroes/epic_dps_(dot)_the_omni-phase_vanguard_final.png",
     "lore": "The Omni-Phase Vanguard is a legendary survivor possessing ten distinct combat subroutines hardwired into his neural cortex. Operating as the ultimate tactical generalist, his biometric chassis is tuned for relentless, prolonged engagements that systematically exhaust corporate strike teams. He dictates the battlefield's tempo, bleeding high-threat targets dry through sheer, inescapable attrition.",
     "ability": {
       "name": "Bell-Lap Lactic Cascade",
@@ -293,7 +293,7 @@
     "UTILITY": 82,
     "ENDURANCE": 47,
     "alias": "The Silver Pentarch",
-    "imagePath": "/assets/heroes/legendary_dot_silver_pentarch_v15_1778501355792.png",
+    "imagePath": "/assets/heroes/legendary_dps_(dot)_the_silver_pentarch_final.png",
     "lore": "Forged in the neon-drenched proving grounds of the '72 Grid, The Silver Pentarch is an elite multi-phase operative who outlasts and dismantles corporate kill-squads. By seamlessly hot-swapping between five distinct combat sub-routines, she grinds down high-value targets through relentless, sustained kinetic pressure. Her silver-tier neuro-link ensures she remains a lethal force long after her enemies' systems suffer critical thermal failure.",
     "ability": {
       "name": "Kinetic Pentathlon Cascade",
@@ -321,7 +321,7 @@
     "UTILITY": 41,
     "ENDURANCE": 86,
     "alias": "The Chrome Cadence",
-    "imagePath": "/assets/heroes/rare_dot_chrome_cadence_v15_1778501374614.png",
+    "imagePath": "/assets/heroes/rare_dps_(dot)_the_chrome_cadence_final.png",
     "lore": "A master of hydro-tactics and synchronized assault, The Chrome Cadence cut her teeth navigating the toxic spillways of the mega-corporate zones. She uses her neural-rhythm tech to weave a web of relentless, stacking trauma that leaves rival hit-squads drowning in their own oil. Small in stature but lethal in sustained output, she is the deadliest metronome on the neon grid.",
     "ability": {
       "name": "The Crimson Catch & Drive",
@@ -349,7 +349,7 @@
     "UTILITY": 99,
     "ENDURANCE": 82,
     "alias": "The Chrome Conductor",
-    "imagePath": "/assets/heroes/common_support_conductor_v15_1778501394978.png",
+    "imagePath": "/assets/heroes/common_support_the_chrome_conductor_final.png",
     "lore": "Operating in the neon underground circuits of the '72 sector, The Chrome Conductor served as the ultimate tactical node for elite strike teams. Utilizing his agile frame to map chaotic battlefields, he fed predictive targeting data and coordinated team movements in real-time. Though classified as a baseline operative, his flawless synergy and street-level grit turned countless doomed skirmishes into legendary victories.",
     "ability": {
       "name": "No-Look Neural Pass",
@@ -377,7 +377,7 @@
     "UTILITY": 98,
     "ENDURANCE": 84,
     "alias": "The Aero-Link Vanguard",
-    "imagePath": "/assets/heroes/epic_support_aero_link_v15_1778501414228.png",
+    "imagePath": "/assets/heroes/epic_support_the_aero-link_vanguard_final.png",
     "lore": "Operating from the shadowed neon courts of Sector 88, The Aero-Link Vanguard acts as the tactical neural-anchor for elite strike operatives. Leveraging her height and flawless aerial kinetics, she dictates the flow of battle by predicting enemy trajectories before they even execute. Her sheer presence and tactical synergy transform fractured rebel units into an unstoppable, cohesive force of devastation.",
     "ability": {
       "name": "Kinetic Quick-Set Protocol",
@@ -405,7 +405,7 @@
     "UTILITY": 93,
     "ENDURANCE": 79,
     "alias": "Chrome Sentinel",
-    "imagePath": "/assets/heroes/legendary_support_chrome_sentinel_v15_1778501435485.png",
+    "imagePath": "/assets/heroes/legendary_support_chrome_sentinel_final.png",
     "lore": "Reforged with military-grade cybernetics and a hyper-threaded neural link, Chrome Sentinel stands as the ultimate legendary anchor for the underground resistance. Her augmented chassis is engineered to absorb massive kinetic trauma, while her tactical coprocessor instantly calculates flawless squad synergies on the fly. Where standard operatives break, she holds the line, distributing vital combat data and shielding to keep her squad operating at peak lethality.",
     "ability": {
       "name": "Neural-Sync Apex Set",
@@ -433,7 +433,7 @@
     "UTILITY": 89,
     "ENDURANCE": 77,
     "alias": "The Kinetic Weaver",
-    "imagePath": "/assets/heroes/rare_support_kinetic_weaver_v15_1778501455637.png",
+    "imagePath": "/assets/heroes/rare_support_the_kinetic_weaver_final.png",
     "lore": "Salvaged from the deep-archive 1904 servers, The Kinetic Weaver's engram was decanted into a high-spec combat chassis to serve as a master tactician for the underground resistance. Wielding a high-tension carbon-mesh cradle, he manipulates battlefield momentum to turn disorganized street solos into a synchronized strike team. His silver-tier combat algorithms ensure the squad operates flawlessly under heavy corporate fire.",
     "ability": {
       "name": "Quick-Stick Kinetic Transfer",
@@ -461,7 +461,7 @@
     "UTILITY": 42,
     "ENDURANCE": 82,
     "alias": "The Analog Vanguard",
-    "imagePath": "/assets/heroes/common_tank_analog_vanguard_v15_1778501475597.png",
+    "imagePath": "/assets/heroes/common_tank_the_analog_vanguard_final.png",
     "lore": "Resurrected from the fragmented data-shards of the 1936 global skirmishes, The Analog Vanguard is a legacy operative who relies on pure brute force. Operating as a frontline enforcer for the underground resistance, he shatters corporate riot lines with old-Earth combat algorithms and 'Greco-Roman' body-locking techniques burned directly into his muscle memory.",
     "ability": {
       "name": "Kinetic Suplex Protocol",
@@ -489,7 +489,7 @@
     "UTILITY": 62,
     "ENDURANCE": 102,
     "alias": "The Gravity Weaver",
-    "imagePath": "/assets/heroes/epic_tank_gravity_weaver_v15_1778501493522.png",
+    "imagePath": "/assets/heroes/epic_tank_the_gravity_weaver_final.png",
     "lore": "An elite frontline enforcer for the Grid's underground resistance, The Gravity Weaver weaponizes pure momentum to shatter corporate riot lines. Forged in the neon-lit dojos of Sector 4, she possesses an uncanny ability to read combat telemetry, turning an opponent's mass into their greatest vulnerability using advanced 'Uchi-Mata' throwing protocols.",
     "ability": {
       "name": "Zero-G Uchi-Mata",
@@ -517,7 +517,7 @@
     "UTILITY": 59,
     "ENDURANCE": 99,
     "alias": "The Tungsten Vice",
-    "imagePath": "/assets/heroes/legendary_tank_tungsten_vice_v15_1778501511437.png",
+    "imagePath": "/assets/heroes/legendary_tank_the_tungsten_vice_final.png",
     "lore": "A legacy vanguard operative from the original 1920 Founders Initiative, 'The Tungsten Vice' relies on hyper-dense biological muscle fibers and kinetic mastery rather than excess chrome. He acts as a localized gravity well, locking down heavily augmented cyber-psychos with pure, unadulterated grappling biomechanics and 'Gut-Wrench' techniques from the early athletic archives.",
     "ability": {
       "name": "Kinetic Gut-Wrench Suplex",
@@ -545,7 +545,7 @@
     "UTILITY": 65,
     "ENDURANCE": 98,
     "alias": "The Collision Engine",
-    "imagePath": "/assets/heroes/rare_tank_iron_grip_v15_1778501531149.png",
+    "imagePath": "/assets/heroes/rare_tank_the_collision_engine_final.png",
     "lore": "Forged in the high-impact zones of the London and Rio sectors, The Collision Engine is a relentless frontline bruiser built to absorb and redirect massive kinetic force. Utilizing a reinforced tungsten-chassis, he initiates zero-tolerance lockdown protocols that turn the tide of urban skirmishes. He doesn't just hold the line\u2014he is the line, an immovable force of grit and carbon-fiber.",
     "ability": {
       "name": "Kinetic Deflection Pulse",

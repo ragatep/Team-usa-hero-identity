@@ -30,7 +30,7 @@ The "Digital Mirror" is driven by a real-time biometric comparison engine.
 - **Identity Match**: This score is surfaced via a pulsing **Neural Sync Status** bar, transforming raw metadata into a personal "Hero Identity" match.
 
 ## Visual Verification
-![Final Hero Grid](/C:/Users/joffet/.gemini/antigravity/brain/8b2f1c84-e72b-4b35-8b12-8f108b9acb65/.system_generated/click_feedback/click_feedback_1778429829243.png)
+![Final Hero Grid](./docs/images/hero_grid_overview.png)
 *Figure 1: The functional Bio-Sync grid showing the high-fidelity Chrome Sentinel and the archetype-coded hero deck.*
 
 ---

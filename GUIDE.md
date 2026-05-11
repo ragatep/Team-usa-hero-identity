@@ -27,7 +27,7 @@ Every hero card in Digital Mirror contains layered information designed to commu
 | **Archetype Badge** | Bottom-Left (next to Rarity) | Shows the hero's MMO role: `TANK`, `DPS`, `DPS (DOT)`, `SUPPORT`, or `CONTROLLER`. Color-coded to the archetype's theme. |
 | **Archetype Diamond** | Top-Right | A rotated diamond icon containing the archetype's letter designation (`T`, `D`, `S`, or `C`). Uses the rarity tier's color. |
 | **Hero Alias** | Bottom-Left (large text) | The operative's cyberpunk codename (e.g., *"The Chrome Cavalier"*). Displayed in bold italic uppercase. |
-| **Athlete Name** | Below Alias | The real-world name of the Olympic or Paralympic athlete. |
+| **Archetype Badge** | Bottom-Left (next to Alias) | Shows the hero's MMO role: `TANK`, `DPS`, `DPS (DOT)`, `SUPPORT`, or `CONTROLLER`. Color-coded to the archetype's theme. |
 | **Rarity Glow Border** | Card Edge | A neon glow effect around the entire card that matches the rarity tier color (Gold, Purple, Blue, or Green). |
 | **Archetype Gradient** | Background | A subtle color gradient behind the portrait that shifts based on the hero's archetype (e.g., crimson for Tank, blue for DPS). |
 
@@ -132,4 +132,4 @@ This creates a deeply personal, data-driven connection between you and each athl
 
 ---
 
-*Verified by Vertex AI // Gemini 3.1 Pro — Hackathon 2026 // Project: Hero Identity*
+*Verified by Vertex AI // Gemini 2.0 Flash — Hackathon 2026 // Project: Hero Identity*
