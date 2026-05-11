@@ -12,7 +12,7 @@ PROJECT_ID = "project-e1786661-5608-4308-9ad"
 LOCATION = "us-central1"
 DATASET_ID = "team_usa_hackathon"
 IDENTITY_TABLE = "hero_identities"
-OUTPUT_FILE = r"E:\joffet\Documents\GitHubRepo\Team-usa-hero-identity\Data_Set\data_set_combined\hero_identities.json"
+OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "..", "Data_Set", "data_set_combined", "hero_identities.json")
 
 # Archetype Definitions for the AI
 ARCHETYPE_DESCRIPTIONS = {

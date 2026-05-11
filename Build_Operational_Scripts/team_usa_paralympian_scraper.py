@@ -5,7 +5,7 @@ import os
 # Configuration
 LIMIT = 50
 SKIP = 0
-OUTPUT_DIR = r"E:\joffet\Documents\GitHubRepo\Team-usa-hero-identity\Data_Set\paralympics"
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "Data_Set", "paralympics")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "team_usa_paralympians.csv")
 
 # Base API URL

@@ -2,8 +2,8 @@ import csv
 import os
 
 def compare_names():
-    olympic_file = r'E:\joffet\Documents\GitHubRepo\Team-usa-hero-identity\Data_Set\olympics\athlete_events.csv'
-    paralympic_file = r'E:\joffet\Documents\GitHubRepo\Team-usa-hero-identity\Data_Set\paralympics\team_usa_paralympians.csv'
+    olympic_file = os.path.join(os.path.dirname(__file__), "..", "Data_Set", "olympics", "athlete_events.csv")
+    paralympic_file = os.path.join(os.path.dirname(__file__), "..", "Data_Set", "paralympics", "team_usa_paralympians.csv")
 
     if not os.path.exists(olympic_file):
         print(f"Error: {olympic_file} not found.")

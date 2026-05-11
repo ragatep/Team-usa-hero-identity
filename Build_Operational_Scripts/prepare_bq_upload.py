@@ -51,8 +51,8 @@ def parse_years(years_str):
     return [int(y) for y in years]
 
 def prepare_data():
-    input_file = r'E:\joffet\Documents\GitHubRepo\Team-usa-hero-identity\Data_Set\paralympics\team_usa_paralympians.csv'
-    output_file = r'E:\joffet\Documents\GitHubRepo\Team-usa-hero-identity\Data_Set\paralympics\team_usa_paralympians_clean.csv'
+    input_file = os.path.join(os.path.dirname(__file__), "..", "Data_Set", "paralympics", "team_usa_paralympians.csv")
+    output_file = os.path.join(os.path.dirname(__file__), "..", "Data_Set", "paralympics", "team_usa_paralympians_clean.csv")
     
     if not os.path.exists(input_file):
         print(f"Error: {input_file} not found.")
@@ -144,7 +144,7 @@ def prepare_data():
         {"name": "Medal", "type": "STRING", "mode": "NULLABLE"}
     ]
     
-    schema_file = r'E:\joffet\Documents\GitHubRepo\Team-usa-hero-identity\paralympians_schema.json'
+    schema_file = os.path.join(os.path.dirname(__file__), "..", "paralympians_schema.json")
     with open(schema_file, 'w') as f_schema:
         json.dump(schema, f_schema, indent=4)
     print(f"Updated BigQuery schema saved to: {schema_file}")
